@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Makemon</string>
+
+    <string name="menu_one">リスト 1</string>
+    <string name="menu_two">リスト 2</string>
+    <string name="menu_three">リスト 3</string>
+    <string name="menu_four">リスト 4</string>
+</resources>
