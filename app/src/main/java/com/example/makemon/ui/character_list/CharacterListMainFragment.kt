@@ -38,6 +38,7 @@ class CharacterListMainFragment : Fragment(), View.OnClickListener {
             setTitleText("도감")
         }
 
+
         binding.centerView.setOnClickListener(this)
         binding.menuOne.setOnClickListener(this)
         binding.menuTwo.setOnClickListener(this)
