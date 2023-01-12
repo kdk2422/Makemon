@@ -59,8 +59,6 @@ class CharacterListMainFragment : Fragment(), View.OnClickListener {
         super.onResume()
         Log.d(TAG, "onResume")
 
-        binding.centerView.bringToFront()
-
         val metrics = WindowMetricsCalculator.getOrCreate().computeCurrentWindowMetrics(requireActivity())
 
         val widthDp = metrics.bounds.width() / resources.displayMetrics.density

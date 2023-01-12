@@ -6,8 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.viewpager2.widget.ViewPager2
+import com.example.makemon.adapter.ViewPagerOneAdapter
 import com.example.makemon.databinding.FragmentCharacterOneBinding
 import com.example.makemon.ui.MainActivity
+
 
 class CharacterListOneFragment : Fragment() {
 
@@ -16,6 +19,8 @@ class CharacterListOneFragment : Fragment() {
     }
 
     lateinit var binding: FragmentCharacterOneBinding
+
+    private var pagerAdapter: ViewPagerOneAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,6 +38,16 @@ class CharacterListOneFragment : Fragment() {
         with(requireActivity() as MainActivity) {
             bottomNavigationVisibility(false)
         }
+
+        binding.viewPager.apply {
+            offscreenPageLimit = 3
+            setPadding(50, 0, 50, 0)
+
+            pagerAdapter = ViewPagerOneAdapter()
+            this.adapter = pagerAdapter
+            this.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        }
+
     }
 
     override fun onResume() {

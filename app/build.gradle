@@ -70,4 +70,7 @@ dependencies {
 
     // Window
     implementation 'androidx.window:window:1.0.0'
+
+    // ViewPager
+    implementation 'androidx.viewpager2:viewpager2:1.1.0-beta01'
 }
