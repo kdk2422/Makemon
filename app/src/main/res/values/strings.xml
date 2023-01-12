@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Makemon</string>
 
+    <string name="appbar_title_home">Home</string>
+    <string name="appbar_title_list">illustrated guide</string>
+    <string name="appbar_title_settings">settings</string>
+
     <string name="menu_one">list 1</string>
     <string name="menu_two">list 2</string>
     <string name="menu_three">list 3</string>

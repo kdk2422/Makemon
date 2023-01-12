@@ -67,4 +67,7 @@ dependencies {
 
     // Splash
     implementation 'androidx.core:core-splashscreen:1.0.0'
+
+    // Window
+    implementation 'androidx.window:window:1.0.0'
 }

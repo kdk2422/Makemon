@@ -1,12 +1,18 @@
 package com.example.makemon.ui
 
+import android.app.NotificationManager
+import android.content.Context
 import android.content.Intent
+import android.media.AudioManager
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import androidx.activity.OnBackPressedCallback
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.getSystemService
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -69,6 +75,27 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     }
 
+    override fun onResume() {
+        super.onResume()
+
+//        val audioManager: AudioManager = this.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+//        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, ((audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC) * 0.5).toInt()), AudioManager.FLAG_PLAY_SOUND)
+    }
+
+    /*override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        when(keyCode) {
+            KeyEvent.KEYCODE_VOLUME_UP -> {
+                Log.w("test", "test")
+                return true
+            }
+            KeyEvent.KEYCODE_VOLUME_DOWN -> {
+                Log.w("test", "test")
+                return true
+            }
+        }
+        return false
+    }*/
+
     private fun setNav() {
         navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
@@ -100,8 +127,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         }
     }
 
-    fun setTitleText(text: String) {
-        binding.toolbar.title.text = text
+    fun setTitleText(text: Int) {
+        binding.toolbar.title.setText(text)
     }
 
     @Deprecated("Deprecated in Android SDK Version 33")
