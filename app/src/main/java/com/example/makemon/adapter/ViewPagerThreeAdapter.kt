@@ -4,11 +4,11 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.makemon.data.Data
-import com.example.makemon.data.listDataOne
+import com.example.makemon.data.listDataThree
 import com.example.makemon.databinding.RecycleItemBinding
 
-class ViewPagerOneAdapter : RecyclerView.Adapter<ViewPagerOneAdapter.ViewHolder>() {
-    val data = listDataOne
+class ViewPagerThreeAdapter : RecyclerView.Adapter<ViewPagerThreeAdapter.ViewHolder>() {
+    val data = listDataThree
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder{
         val binding = RecycleItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -16,7 +16,7 @@ class ViewPagerOneAdapter : RecyclerView.Adapter<ViewPagerOneAdapter.ViewHolder>
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(data[position % listDataOne.size], position)
+        holder.bind(data[position % listDataThree.size], position)
     }
 
     override fun getItemCount(): Int = Int.MAX_VALUE

@@ -12,4 +12,38 @@
         app:layout_constraintHeight_percent="0.7"
         android:scrollbars="horizontal"/>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        app:counterEnabled="true"
+        app:hintEnabled="true"
+        app:hintAnimationEnabled="true"
+        app:counterMaxLength="2"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@id/viewPager"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="원하는 페이지를 입력하세요."
+            android:inputType="number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/btMove"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="이동"
+        android:textSize="20dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/textInputLayer"
+        app:layout_constraintRight_toRightOf="@id/textInputLayer"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

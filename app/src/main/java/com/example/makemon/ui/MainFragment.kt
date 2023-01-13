@@ -2,18 +2,14 @@ package com.example.makemon.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.MotionEvent
 import android.view.View
-import android.view.View.OnTouchListener
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
 import com.example.makemon.R
 import com.example.makemon.databinding.FragmentMainBinding
-
 
 class MainFragment : Fragment() {
 
@@ -43,8 +39,8 @@ class MainFragment : Fragment() {
 
         val anim = AnimationUtils.loadAnimation(requireActivity(), R.anim.main_logo_animation)
         binding.mainLogo.startAnimation(anim)
-
     }
+
 
     override fun onResume() {
         super.onResume()

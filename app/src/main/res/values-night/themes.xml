@@ -14,6 +14,8 @@
         <!-- Customize your theme here. -->
     </style>
 
+<!--    <style name="Widget.App.TextInputLayout" parent="Widget.Material3.AutoCompleteTextView.OutlinedBox"></style>-->
+
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <item name="android:windowSplashScreenBackground" tools:targetApi="s">@color/splash_bg_color</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_background</item>
