@@ -10,5 +10,12 @@
         android:name="com.example.makemon.ui.settings.SettingsFragment"
         android:label="SettingsFragment"
         tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_testFragment"
+            app:destination="@id/testFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.example.makemon.ui.settings.TestFragment"
+        android:label="TestFragment" />
 </navigation>

@@ -34,6 +34,8 @@ class SettingsFragment : Fragment(), View.OnClickListener {
         with(requireActivity() as SettingsActivity) {
             setTitleText(R.string.appbar_title_settings)
         }
+
+        binding.testLayer.setOnClickListener(this)
     }
 
     override fun onResume() {
@@ -45,7 +47,10 @@ class SettingsFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         if (v != null) {
             when(v.id) {
-
+                R.id.testLayer -> {
+                    NavHostFragment.findNavController(this)
+                        .navigate(R.id.action_settingsFragment_to_testFragment)
+                }
             }
         }
 

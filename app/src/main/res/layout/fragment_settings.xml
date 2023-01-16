@@ -16,4 +16,19 @@
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <LinearLayout
+        android:id="@+id/testLayer"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/title">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="one"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
