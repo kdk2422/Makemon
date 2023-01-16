@@ -6,10 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
 import com.example.makemon.R
 import com.example.makemon.databinding.FragmentSettingsBinding
 
-class SettingsFragment : Fragment() {
+class SettingsFragment : Fragment(), View.OnClickListener {
 
     companion object{
         const val TAG = "SettingsFragment"
@@ -38,6 +39,15 @@ class SettingsFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         Log.d(TAG, "onResume")
+
+    }
+
+    override fun onClick(v: View?) {
+        if (v != null) {
+            when(v.id) {
+
+            }
+        }
 
     }
 }
