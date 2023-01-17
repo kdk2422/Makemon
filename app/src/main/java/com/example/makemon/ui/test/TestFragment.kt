@@ -1,4 +1,4 @@
-package com.example.makemon.ui.settings
+package com.example.makemon.ui.test
 
 import android.content.res.Resources
 import android.graphics.drawable.BitmapDrawable

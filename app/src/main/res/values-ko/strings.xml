@@ -11,4 +11,8 @@
     <string name="menu_four">리스트 4</string>
 
     <string name="viewpager_banner_text">%d / %d</string>
+
+    <string name="bottom_navigation_home_text">홈</string>
+    <string name="bottom_navigation_list_text">도감 리스트</string>
+    <string name="bottom_navigation_settings_text">설정</string>
 </resources>

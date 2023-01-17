@@ -1,7 +1,9 @@
 package com.example.makemon.data
 
 data class Data(
-    val title: String
+    val title: String,
+    /*val image: String,
+    val contents: String*/
 )
 
 var listDataOne = listOf(

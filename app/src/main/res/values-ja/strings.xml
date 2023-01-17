@@ -11,4 +11,8 @@
     <string name="menu_four">リスト 4</string>
 
     <string name="viewpager_banner_text">%d / %d</string>
+
+    <string name="bottom_navigation_home_text">ホーム画面</string>
+    <string name="bottom_navigation_list_text">図鑑 リスト</string>
+    <string name="bottom_navigation_settings_text">設定</string>
 </resources>

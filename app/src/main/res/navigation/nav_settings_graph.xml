@@ -13,9 +13,16 @@
         <action
             android:id="@+id/action_settingsFragment_to_testFragment"
             app:destination="@id/testFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testTwoFragment"
+            app:destination="@id/testTwoFragment" />
     </fragment>
     <fragment
         android:id="@+id/testFragment"
-        android:name="com.example.makemon.ui.settings.TestFragment"
+        android:name="com.example.makemon.ui.test.TestFragment"
         android:label="TestFragment" />
+    <fragment
+        android:id="@+id/testTwoFragment"
+        android:name="com.example.makemon.ui.test.TestTwoFragment"
+        android:label="TestTwoFragment" />
 </navigation>

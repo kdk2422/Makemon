@@ -36,6 +36,7 @@ class SettingsFragment : Fragment(), View.OnClickListener {
         }
 
         binding.testLayer.setOnClickListener(this)
+        binding.testLayerTwo.setOnClickListener(this)
     }
 
     override fun onResume() {
@@ -50,6 +51,10 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                 R.id.testLayer -> {
                     NavHostFragment.findNavController(this)
                         .navigate(R.id.action_settingsFragment_to_testFragment)
+                }
+                R.id.testLayerTwo -> {
+                    NavHostFragment.findNavController(this)
+                        .navigate(R.id.action_settingsFragment_to_testTwoFragment)
                 }
             }
         }
