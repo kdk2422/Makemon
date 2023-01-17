@@ -7,19 +7,17 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.size
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.makemon.R
 import com.example.makemon.adapter.ViewPagerOneAdapter
 import com.example.makemon.databinding.FragmentCharacterOneBinding
 import com.example.makemon.ui.MainActivity
+import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
 
 
 class CharacterListOneFragment : Fragment(), View.OnClickListener {
-
-    companion object{
-        const val TAG = "CharacterListOneFragment"
-    }
 
     lateinit var binding: FragmentCharacterOneBinding
 
@@ -38,7 +36,6 @@ class CharacterListOneFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.d(TAG, "onViewCreated")
 
         with(requireActivity() as MainActivity) {
             bottomNavigationVisibility(false)
@@ -47,13 +44,40 @@ class CharacterListOneFragment : Fragment(), View.OnClickListener {
         binding.btMove.setOnClickListener(this)
 
         binding.viewPager.apply {
+            // 옆 페이지 보이게
             offscreenPageLimit = 3
             setPadding(50, 0, 50, 0)
 
+            // adapter 연결
             pagerAdapter = ViewPagerOneAdapter()
             this.adapter = pagerAdapter
             this.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
+            // page 변경 콜백
+            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageScrolled(
+                    position: Int,
+                    positionOffset: Float,
+                    positionOffsetPixels: Int
+                ) {
+                    super.onPageScrolled(position, positionOffset, positionOffsetPixels)
+                }
+
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+
+                    Log.w("CharacterListOneFragment", "position:: $position")
+                    if (position.toString().toInt() > 29) {
+                        binding.textPage.text = String.format(getString(R.string.viewpager_banner_text), position - 29, pagerAdapter!!.data.size)
+                    } else {
+                        binding.textPage.text = String.format(getString(R.string.viewpager_banner_text), position + 1, pagerAdapter!!.data.size)
+                    }
+                }
+
+                override fun onPageScrollStateChanged(state: Int) {
+                    super.onPageScrollStateChanged(state)
+                }
+            })
         }
 
         binding.editPage.addTextChangedListener(object : TextWatcher {
@@ -78,7 +102,6 @@ class CharacterListOneFragment : Fragment(), View.OnClickListener {
 
     override fun onResume() {
         super.onResume()
-        Log.d(TAG, "onResume")
     }
 
     override fun onClick(v: View?) {
