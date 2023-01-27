@@ -1,21 +1,25 @@
 package com.example.makemon.ui
 
+import android.Manifest
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Context
+import android.content.pm.PackageManager
 import android.os.Bundle
+import android.os.StrictMode
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.window.layout.WindowMetricsCalculator
 import com.example.makemon.R
 import com.example.makemon.databinding.FragmentMainBinding
 
 class MainFragment : Fragment() {
-
-    companion object{
-        const val TAG = "MainFragment"
-    }
 
     lateinit var binding: FragmentMainBinding
 
@@ -31,19 +35,32 @@ class MainFragment : Fragment() {
     @SuppressLint("ClickableViewAccessibility")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.d(TAG, "onViewCreated")
 
         with(requireActivity() as MainActivity) {
             setTitleText(R.string.appbar_title_home)
         }
 
+        if (ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            verifyStoragePermissionLauncher.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        }
+        val builder : StrictMode.VmPolicy.Builder = StrictMode.VmPolicy.Builder()
+        StrictMode.setVmPolicy(builder.build())
+
         val anim = AnimationUtils.loadAnimation(requireActivity(), R.anim.main_logo_animation)
         binding.mainLogo.startAnimation(anim)
     }
 
-
     override fun onResume() {
         super.onResume()
-        Log.d(TAG, "onResume")
+
     }
+
+    private val verifyStoragePermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) {
+            if (it) {
+                Log.d("MainFragment", "onActivityResult: PERMISSION GRANTED")
+            } else {
+                Log.d("MainFragment", "onActivityResult: PERMISSION DENIED")
+            }
+        }
 }
