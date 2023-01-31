@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/parentView"
-    android:background="@color/white_black">
+    android:background="@color/view_bg_color">
 
     <TextView
         android:id="@+id/menuOne"
@@ -13,7 +13,7 @@
         android:text="@string/menu_one"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:textColor="@color/black_white"
+        android:textColor="@color/black"
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="@id/centerView"
         app:layout_constraintBottom_toBottomOf="@id/centerView"
@@ -27,7 +27,7 @@
         android:text="@string/menu_two"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:textColor="@color/black_white"
+        android:textColor="@color/black"
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="@id/centerView"
         app:layout_constraintBottom_toBottomOf="@id/centerView"
@@ -41,7 +41,7 @@
         android:text="@string/menu_three"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:textColor="@color/black_white"
+        android:textColor="@color/black"
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="@id/centerView"
         app:layout_constraintBottom_toBottomOf="@id/centerView"
@@ -55,7 +55,7 @@
         android:text="@string/menu_four"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:textColor="@color/black_white"
+        android:textColor="@color/black"
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="@id/centerView"
         app:layout_constraintBottom_toBottomOf="@id/centerView"
@@ -69,7 +69,7 @@
         android:text="TAP"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:textColor="@color/black_white"
+        android:textColor="@color/black"
         android:gravity="center"
         android:padding="25dp"
         android:background="@drawable/tab_button_background"

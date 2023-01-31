@@ -53,6 +53,30 @@ class CharacterListFourFragment : Fragment(), View.OnClickListener {
             this.adapter = pagerAdapter
             this.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
+            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageScrolled(
+                    position: Int,
+                    positionOffset: Float,
+                    positionOffsetPixels: Int
+                ) {
+                    super.onPageScrolled(position, positionOffset, positionOffsetPixels)
+                }
+
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+
+                    Log.w("CharacterListOneFragment", "position:: $position")
+                    if (position.toString().toInt() > 29) {
+                        binding.textPage.text = String.format(getString(R.string.viewpager_banner_text), position - 29, pagerAdapter!!.data.size)
+                    } else {
+                        binding.textPage.text = String.format(getString(R.string.viewpager_banner_text), position + 1, pagerAdapter!!.data.size)
+                    }
+                }
+
+                override fun onPageScrollStateChanged(state: Int) {
+                    super.onPageScrollStateChanged(state)
+                }
+            })
         }
 
         binding.editPage.addTextChangedListener(object : TextWatcher {

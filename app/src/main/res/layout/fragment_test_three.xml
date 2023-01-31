@@ -4,17 +4,20 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/view_bg_color"
+    android:animateLayoutChanges="true"
     android:id="@+id/mainView">
 
-    <Button
-        android:id="@+id/captureButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="capture"
-        android:textSize="10dp"
+    <View
+        android:id="@+id/expandedView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/grey_one"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white_black">
+    android:background="@color/view_bg_color">
 
     <TextView
         android:id="@+id/title"
@@ -12,7 +12,7 @@
         android:gravity="center"
         android:text="settings"
         android:textSize="40dp"
-        android:textColor="@color/black_white"
+        android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -42,6 +42,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="two"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/testLayerThree"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/testLayerTwo">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="three"
             android:gravity="center"/>
 
     </LinearLayout>

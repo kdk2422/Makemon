@@ -10,9 +10,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.example.makemon.R
 import com.example.makemon.databinding.FragmentTestTwoBinding
 import com.example.makemon.utils.getFormattedDateFromString
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import java.io.File
 import java.io.FileOutputStream
 import java.io.IOException
@@ -24,8 +28,7 @@ class TestTwoFragment : Fragment(), View.OnClickListener {
 
     lateinit var binding: FragmentTestTwoBinding
 
-    var mediaScannerConnection: MediaScannerConnection? = null
-    var mediaScannerClient: MediaScannerConnection.MediaScannerConnectionClient? = null
+    private var isToastShowing = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -52,12 +55,19 @@ class TestTwoFragment : Fragment(), View.OnClickListener {
             when(v.id) {
                 R.id.captureButton -> {
                     val rootView: View = binding.mainView
-
                     val screenShot = capture(rootView)
 
-                    MediaScannerConnection.scanFile(requireActivity(),
-                        arrayOf(arrayOf(screenShot).toString()), null, null).apply {
-                        Toast.makeText(requireActivity(), "화면이 캡쳐되었습니다.", Toast.LENGTH_SHORT).show()
+                    if (!isToastShowing) {
+                        MediaScannerConnection.scanFile(requireActivity(),
+                            arrayOf(arrayOf(screenShot).toString()), null, null).apply {
+                            Toast.makeText(requireActivity(), "화면이 캡쳐 되었습니다.", Toast.LENGTH_SHORT).show().apply {
+                                isToastShowing = true
+                            }
+                        }
+                        lifecycleScope.launch {
+                            delay(2000)
+                            isToastShowing = false
+                        }
                     }
                 }
             }
@@ -65,9 +75,13 @@ class TestTwoFragment : Fragment(), View.OnClickListener {
     }
 
     private fun capture(view: View): File {
-        view.isDrawingCacheEnabled = true
 
-        val screenBitmap: Bitmap = view.drawingCache
+        // Android API 28 부터 getDrawingCache 가 deprecated 가 되어 bitmap 으로 수정
+        val screenBitmap = Bitmap.createBitmap(
+            view.width, view.height, Bitmap.Config.ARGB_8888
+        )
+        val canvas = Canvas(screenBitmap)
+        view.draw(canvas)
 
         val now = System.currentTimeMillis()
         val date = Date(now)
@@ -80,22 +94,11 @@ class TestTwoFragment : Fragment(), View.OnClickListener {
         val os: FileOutputStream
         try {
             os = FileOutputStream(file)
-            screenBitmap.compress(Bitmap.CompressFormat.PNG, 90, os)
+            screenBitmap.compress(Bitmap.CompressFormat.PNG, 100, os)
             os.close()
         } catch (e: IOException) {
             e.printStackTrace()
         }
-
-        view.isDrawingCacheEnabled = false
         return file
-    }
-
-    private fun getBitmapFromView(view: View): Bitmap {
-        val bitmap = Bitmap.createBitmap(
-            view.width, view.height, Bitmap.Config.ARGB_8888
-        )
-        val canvas = Canvas(bitmap)
-        view.draw(canvas)
-        return bitmap
     }
 }

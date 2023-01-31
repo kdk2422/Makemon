@@ -2,9 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:id="@+id/settingsMainToolbar"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/view_bg_color">
 
     <LinearLayout
+        android:id="@+id/settingsToolbar"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
@@ -16,7 +19,8 @@
             android:layout_height="40dp"
             android:text=""
             android:textSize="20dp"
-            android:gravity="center" />
+            android:gravity="center"
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 

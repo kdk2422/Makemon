@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_settingsFragment_to_testTwoFragment"
             app:destination="@id/testTwoFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testThreeFragment"
+            app:destination="@id/testThreeFragment" />
     </fragment>
     <fragment
         android:id="@+id/testFragment"
@@ -25,4 +28,8 @@
         android:id="@+id/testTwoFragment"
         android:name="com.example.makemon.ui.test.TestTwoFragment"
         android:label="TestTwoFragment" />
+    <fragment
+        android:id="@+id/testThreeFragment"
+        android:name="com.example.makemon.ui.test.TestThreeFragment"
+        android:label="TestThreeFragment" />
 </navigation>
