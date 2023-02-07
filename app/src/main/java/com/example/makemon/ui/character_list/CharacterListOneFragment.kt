@@ -7,19 +7,17 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.size
+import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.makemon.R
 import com.example.makemon.adapter.ViewPagerOneAdapter
-import com.example.makemon.databinding.FragmentCharacterOneBinding
+import com.example.makemon.databinding.FragmentCharacterBinding
 import com.example.makemon.ui.MainActivity
-import com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-
 
 class CharacterListOneFragment : Fragment(), View.OnClickListener {
 
-    lateinit var binding: FragmentCharacterOneBinding
+    lateinit var binding: FragmentCharacterBinding
 
     private var pagerAdapter: ViewPagerOneAdapter? = null
 
@@ -30,7 +28,7 @@ class CharacterListOneFragment : Fragment(), View.OnClickListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentCharacterOneBinding.inflate(inflater, container, false)
+        binding = FragmentCharacterBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -39,14 +37,15 @@ class CharacterListOneFragment : Fragment(), View.OnClickListener {
 
         with(requireActivity() as MainActivity) {
             bottomNavigationVisibility(false)
+            setToolbarBackVisibility(true)
         }
 
         binding.btMove.setOnClickListener(this)
 
         binding.viewPager.apply {
             // 옆 페이지 보이게
-            offscreenPageLimit = 3
-            setPadding(50, 0, 50, 0)
+            /*offscreenPageLimit = 3
+            setPadding(50, 0, 50, 0)*/
 
             // adapter 연결
             pagerAdapter = ViewPagerOneAdapter()
@@ -108,6 +107,7 @@ class CharacterListOneFragment : Fragment(), View.OnClickListener {
         if (v != null) {
             when(v.id) {
                 R.id.btMove -> {
+                    if (binding.editPage.text.toString().isEmpty()) return
                     binding.viewPager.currentItem = pageIndex.toInt() - 1
                 }
             }

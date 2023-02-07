@@ -9,6 +9,8 @@
     <string name="menu_two">list 2</string>
     <string name="menu_three">list 3</string>
     <string name="menu_four">list 4</string>
+    <string name="menu_five">list 5</string>
+    <string name="menu_six">list 6</string>
 
     <string name="viewpager_banner_text">%d / %d</string>
 

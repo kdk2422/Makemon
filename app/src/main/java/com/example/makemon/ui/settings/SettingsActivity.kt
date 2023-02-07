@@ -38,6 +38,7 @@ class SettingsActivity : BaseActivity<ActivitySettingsBinding>() {
         overridePendingTransition(R.anim.settings_in_animation, R.anim.none_animation)
 
         setNav()
+        setToolbarBack()
     }
 
     private fun setNav() {
@@ -50,6 +51,11 @@ class SettingsActivity : BaseActivity<ActivitySettingsBinding>() {
         binding.toolbar.title.setText(text)
     }
 
+    private fun setToolbarBack() {
+        binding.toolbar.back.setOnClickListener {
+            onBackPressed()
+        }
+    }
 
     private val backPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {

@@ -9,13 +9,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import com.example.makemon.R
 import com.example.makemon.databinding.FragmentMainBinding
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import java.lang.reflect.Field
 
 
-class MainFragment : Fragment() {
+open class MainFragment : Fragment() {
 
     lateinit var binding: FragmentMainBinding
 
@@ -49,10 +54,16 @@ class MainFragment : Fragment() {
 
         with(requireActivity() as MainActivity) {
             setTitleText(R.string.appbar_title_home)
+            setToolbarBackVisibility(false)
         }
 
         val anim = AnimationUtils.loadAnimation(requireActivity(), R.anim.main_logo_animation)
         binding.mainLogo.startAnimation(anim)
+
+        lifecycleScope.launch {
+            delay(1000)
+            binding.scrollTextTwo.startScroll()
+        }
     }
 
     override fun onResume() {

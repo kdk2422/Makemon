@@ -5,8 +5,8 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 
-class MyReceiver : BroadcastReceiver() {
+class MakemonReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        Log.d("MyReceiver", "Intent: $intent")
+        Log.d("MakemonReceiver", "Intent: $intent")
     }
 }

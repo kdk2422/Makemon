@@ -9,37 +9,49 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:scrollbars="vertical"
         android:scrollbarStyle="outsideInset"
-        app:layout_constraintHeight_percent="0.7"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textInputLayer"/>
 
     <TextView
         android:id="@+id/textPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1 / 30"
-        android:textSize="15dp"
-        android:textColor="@color/black"
         android:layout_margin="20dp"
-        android:padding="10dp"
         android:background="@drawable/page_view"
+        android:padding="10dp"
+        android:text="1 / 30"
+        android:textColor="@color/black"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="@id/viewPager"
-        app:layout_constraintRight_toRightOf="@id/viewPager"/>
+        app:layout_constraintRight_toRightOf="@id/viewPager" />
+
+    <View
+        android:id="@+id/centerView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/textPage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textInputLayer"
+        app:layout_constraintWidth_percent="0.95"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayer"
+        style="@style/Widget.App.TextInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:theme="@style/Widget.App.TextInputLayout"
         app:counterEnabled="true"
         app:counterMaxLength="2"
         app:errorEnabled="true"
         app:hintAnimationEnabled="true"
         app:hintEnabled="true"
-        app:layout_constraintHeight_percent="0.1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewPager"
+        app:layout_constraintBottom_toTopOf="@id/btMove"
         app:layout_constraintWidth_percent="0.9">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -55,10 +67,11 @@
         android:id="@+id/btMove"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_margin="15dp"
         android:gravity="center_vertical"
         android:text="이동"
         android:textSize="20dp"
-        app:layout_constraintRight_toRightOf="@id/textInputLayer"
-        app:layout_constraintTop_toBottomOf="@id/textInputLayer" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

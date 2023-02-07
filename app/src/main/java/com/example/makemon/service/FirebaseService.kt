@@ -85,7 +85,7 @@ class FirebaseService : FirebaseMessagingService() {
         val notification: Notification = builder.build()
         notificationManager.notify(1, notification)
 
-        //Note:  커스텀 Notification View 설정하는 코드
+        //Note: 커스텀 Notification View 설정하는 코드
         /*.setStyle(NotificationCompat.DecoratedCustomViewStyle())
         .setCustomContentView(customLayout)
         .setCustomBigContentView(expandLayout)*/

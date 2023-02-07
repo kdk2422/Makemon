@@ -12,5 +12,13 @@ class MakemonApp : Application() {
     override fun onCreate() {
         super.onCreate()
         Log.d(TAG, "onCreate")
+
+        /*val db = Room.databaseBuilder(
+            this,
+            AppDatabase::class.java, "test-db"
+        ).build()
+
+        val userDao = db.userDao()
+        val users: List<User> = userDao.getAll()*/
     }
 }

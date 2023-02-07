@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.makemon.R
 import com.example.makemon.adapter.ViewPagerTwoAdapter
-import com.example.makemon.databinding.FragmentCharacterOneBinding
+import com.example.makemon.databinding.FragmentCharacterBinding
 import com.example.makemon.ui.MainActivity
 
 class CharacterListTwoFragment : Fragment(), View.OnClickListener {
@@ -20,7 +20,7 @@ class CharacterListTwoFragment : Fragment(), View.OnClickListener {
         const val TAG = "CharacterListTwoFragment"
     }
 
-    lateinit var binding: FragmentCharacterOneBinding
+    lateinit var binding: FragmentCharacterBinding
 
     private var pagerAdapter: ViewPagerTwoAdapter? = null
 
@@ -31,7 +31,7 @@ class CharacterListTwoFragment : Fragment(), View.OnClickListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentCharacterOneBinding.inflate(inflater, container, false)
+        binding = FragmentCharacterBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -41,13 +41,14 @@ class CharacterListTwoFragment : Fragment(), View.OnClickListener {
 
         with(requireActivity() as MainActivity) {
             bottomNavigationVisibility(false)
+            setToolbarBackVisibility(true)
         }
 
         binding.btMove.setOnClickListener(this)
 
         binding.viewPager.apply {
-            offscreenPageLimit = 3
-            setPadding(50, 0, 50, 0)
+            /*offscreenPageLimit = 3
+            setPadding(50, 0, 50, 0)*/
 
             pagerAdapter = ViewPagerTwoAdapter()
             this.adapter = pagerAdapter
@@ -108,6 +109,7 @@ class CharacterListTwoFragment : Fragment(), View.OnClickListener {
         if (v != null) {
             when(v.id) {
                 R.id.btMove -> {
+                    if (binding.editPage.text.toString().isEmpty()) return
                     binding.viewPager.currentItem = pageIndex.toInt() - 1
                 }
             }

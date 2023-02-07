@@ -51,7 +51,7 @@
 
         <!-- Receiver -->
         <receiver
-            android:name=".receiver.MyReceiver"
+            android:name=".receiver.MakemonReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.LOCALE_CHANGED" />

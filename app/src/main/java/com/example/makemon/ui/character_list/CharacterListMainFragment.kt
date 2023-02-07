@@ -7,14 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.NavHostFragment
 import androidx.window.layout.WindowMetricsCalculator
 import com.example.makemon.R
 import com.example.makemon.databinding.FragmentCharacterMainBinding
 import com.example.makemon.ui.MainActivity
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.delay
+import kotlin.math.sqrt
+
 
 class CharacterListMainFragment : Fragment(), View.OnClickListener {
 
@@ -27,8 +26,11 @@ class CharacterListMainFragment : Fragment(), View.OnClickListener {
     private var menuActive: Boolean = false
     private var displayWidth: Float = 0f
     private var displayHeight: Float = 0f
-    private var minusDisplayWidth: Float = 0f
-    private var minusDisplayHeight: Float = 0f
+    private var testDiagonal: Float = 0f
+    private var testFour: Float = 0f
+
+    private var testDisplay: Float = 0f
+    private var testDisplayTwo: Float = 0f
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,6 +48,7 @@ class CharacterListMainFragment : Fragment(), View.OnClickListener {
         with(requireActivity() as MainActivity) {
             bottomNavigationVisibility(true)
             setTitleText(R.string.appbar_title_list)
+            setToolbarBackVisibility(false)
         }
 
         binding.centerView.setOnClickListener(this)
@@ -53,6 +56,8 @@ class CharacterListMainFragment : Fragment(), View.OnClickListener {
         binding.menuTwo.setOnClickListener(this)
         binding.menuThree.setOnClickListener(this)
         binding.menuFour.setOnClickListener(this)
+        binding.menuFive.setOnClickListener(this)
+        binding.menuSix.setOnClickListener(this)
     }
 
     override fun onResume() {
@@ -67,17 +72,24 @@ class CharacterListMainFragment : Fragment(), View.OnClickListener {
         displayWidth = (widthDp / 1.5).toFloat()
         displayHeight = (heightDp / 2.5).toFloat()
 
-        minusDisplayWidth = widthDp - displayWidth
-        minusDisplayHeight = heightDp - displayHeight
+        testDisplay = (widthDp / 1.2).toFloat()
+        testDisplayTwo = widthDp / 2
 
         Log.w(TAG, "widthDp: $widthDp")
         Log.w(TAG, "displayWidth: $displayWidth")
-        Log.w(TAG, "minusDisplayWidth: $minusDisplayWidth")
 
-        Log.w(TAG, "displayHeight: $displayHeight")
         Log.w(TAG, "heightDp: $heightDp")
-        Log.w(TAG, "minusDisplayHeight: $minusDisplayHeight")
+        Log.w(TAG, "displayHeight: $displayHeight")
 
+        Log.w(TAG, "testDisplay: $testDisplay")
+        Log.w(TAG, "testDisplayTwo: $testDisplayTwo")
+
+        val test = displayWidth * displayWidth
+        val testTwo = displayHeight * displayHeight
+        val testThree = test + testTwo
+        testFour = sqrt(testThree)
+        Log.w(TAG, "testFour: $testFour")
+        testDiagonal = testFour / 10
     }
 
     override fun onClick(v: View?) {
@@ -90,27 +102,39 @@ class CharacterListMainFragment : Fragment(), View.OnClickListener {
                     binding.menuTwo.visibility = View.VISIBLE
                     binding.menuThree.visibility = View.VISIBLE
                     binding.menuFour.visibility = View.VISIBLE
+                    binding.menuFive.visibility = View.VISIBLE
+                    binding.menuSix.visibility = View.VISIBLE
 
                     if (!menuActive) {
-                        binding.menuOne.animate().translationX(displayWidth).withLayer()
+                        binding.menuOne.animate().translationX(-testDisplayTwo).withLayer()
                         binding.menuOne.animate().translationY(-displayHeight).withLayer()
                         val animOne = AnimationUtils.loadAnimation(requireActivity(), R.anim.menu_one_animation)
                         binding.menuOne.startAnimation(animOne)
 
-                        binding.menuTwo.animate().translationX(displayWidth).withLayer()
-                        binding.menuTwo.animate().translationY(displayHeight).withLayer()
+                        binding.menuTwo.animate().translationX(testDisplayTwo).withLayer()
+                        binding.menuTwo.animate().translationY(-displayHeight).withLayer()
                         val animTwo = AnimationUtils.loadAnimation(requireActivity(), R.anim.menu_one_animation)
                         binding.menuTwo.startAnimation(animTwo)
 
-                        binding.menuThree.animate().translationX(-displayWidth).withLayer()
-                        binding.menuThree.animate().translationY(displayHeight).withLayer()
+                        binding.menuThree.animate().translationX(-testDisplay).withLayer()
+                        binding.menuThree.animate().translationY(0f).withLayer()
                         val animThree = AnimationUtils.loadAnimation(requireActivity(), R.anim.menu_one_animation)
                         binding.menuThree.startAnimation(animThree)
 
-                        binding.menuFour.animate().translationX(-displayWidth).withLayer()
-                        binding.menuFour.animate().translationY(-displayHeight).withLayer()
+                        binding.menuFour.animate().translationX(testDisplay).withLayer()
+                        binding.menuFour.animate().translationY(0f).withLayer()
                         val animFour = AnimationUtils.loadAnimation(requireActivity(), R.anim.menu_one_animation)
                         binding.menuFour.startAnimation(animFour)
+
+                        binding.menuFive.animate().translationX(-testDisplayTwo).withLayer()
+                        binding.menuFive.animate().translationY(displayHeight).withLayer()
+                        val animFive = AnimationUtils.loadAnimation(requireActivity(), R.anim.menu_one_animation)
+                        binding.menuFive.startAnimation(animFive)
+
+                        binding.menuSix.animate().translationX(testDisplayTwo).withLayer()
+                        binding.menuSix.animate().translationY(displayHeight).withLayer()
+                        val animSix = AnimationUtils.loadAnimation(requireActivity(), R.anim.menu_one_animation)
+                        binding.menuSix.startAnimation(animSix)
 
                         setMenuActive(true)
                     } else {
@@ -133,6 +157,16 @@ class CharacterListMainFragment : Fragment(), View.OnClickListener {
                         binding.menuFour.animate().translationY(0f).withLayer()
                         val animFour = AnimationUtils.loadAnimation(requireActivity(), R.anim.menu_one_animation_close)
                         binding.menuFour.startAnimation(animFour)
+
+                        binding.menuFive.animate().translationX(0f).withLayer()
+                        binding.menuFive.animate().translationY(0f).withLayer()
+                        val animFive = AnimationUtils.loadAnimation(requireActivity(), R.anim.menu_one_animation_close)
+                        binding.menuFive.startAnimation(animFive)
+
+                        binding.menuSix.animate().translationX(0f).withLayer()
+                        binding.menuSix.animate().translationY(0f).withLayer()
+                        val animSix = AnimationUtils.loadAnimation(requireActivity(), R.anim.menu_one_animation_close)
+                        binding.menuSix.startAnimation(animSix)
 
                         setMenuActive(false)
                     }
@@ -158,6 +192,16 @@ class CharacterListMainFragment : Fragment(), View.OnClickListener {
                     NavHostFragment.findNavController(this)
                         .navigate(R.id.action_characterListMainFragment_to_characterListFourFragment)
                 }
+                R.id.menuFive -> {
+                    if (!menuActive) return
+                    NavHostFragment.findNavController(this)
+                        .navigate(R.id.action_characterListMainFragment_to_characterListFiveFragment)
+                }
+                R.id.menuSix -> {
+                    if (!menuActive) return
+                    NavHostFragment.findNavController(this)
+                        .navigate(R.id.action_characterListMainFragment_to_characterListSixFragment)
+                }
             }
         }
     }
@@ -168,12 +212,16 @@ class CharacterListMainFragment : Fragment(), View.OnClickListener {
             binding.menuTwo.isClickable = true
             binding.menuThree.isClickable = true
             binding.menuFour.isClickable = true
+            binding.menuFive.isClickable = true
+            binding.menuSix.isClickable = true
             menuActive = true
         } else {
             binding.menuOne.isClickable = false
             binding.menuTwo.isClickable = false
             binding.menuThree.isClickable = false
             binding.menuFour.isClickable = false
+            binding.menuFive.isClickable = false
+            binding.menuSix.isClickable = false
             menuActive = false
         }
     }

@@ -10,6 +10,7 @@ import android.util.Log
 import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.getSystemService
@@ -22,8 +23,10 @@ import com.example.makemon.R
 import com.example.makemon.databinding.ActivityMainBinding
 import com.example.makemon.service.FirebaseService
 import com.example.makemon.ui.base.BaseActivity
+import com.example.makemon.ui.character_list.CharacterListFiveFragment
 import com.example.makemon.ui.character_list.CharacterListFourFragment
 import com.example.makemon.ui.character_list.CharacterListOneFragment
+import com.example.makemon.ui.character_list.CharacterListSixFragment
 import com.example.makemon.ui.character_list.CharacterListThreeFragment
 import com.example.makemon.ui.character_list.CharacterListTwoFragment
 import com.example.makemon.ui.settings.SettingsActivity
@@ -53,11 +56,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         Log.d(TAG, "onCreate")
 
         closeBackPressed = CloseBackPressed(this)
-        setNav()
 
         lifecycleScope.launch(Dispatchers.IO) {
             getTokenResult()
         }
+
+        setNav()
+        setToolbarBack()
     }
 
     override fun onResume() {
@@ -95,8 +100,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                     NavigationUI.onNavDestinationSelected(item, navController)
                 }
                 R.id.settingsActivity -> {
-                    val intent = Intent(this@MainActivity, SettingsActivity::class.java)
-                    startActivity(intent)
+                    Toast.makeText(this, "업데이트 예정입니다.", Toast.LENGTH_LONG).show()
+//                    val intent = Intent(this@MainActivity, SettingsActivity::class.java)
+//                    startActivity(intent)
                 }
                 else -> {}
             }
@@ -116,6 +122,20 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         binding.toolbar.title.setText(text)
     }
 
+    fun setToolbarBackVisibility(boolean: Boolean) {
+        if (boolean) {
+            binding.toolbar.back.visibility = View.VISIBLE
+        } else {
+            binding.toolbar.back.visibility = View.GONE
+        }
+    }
+
+    private fun setToolbarBack() {
+        binding.toolbar.back.setOnClickListener {
+            onBackPressed()
+        }
+    }
+
     private val backPressedCallback = object : OnBackPressedCallback(true) {
         override fun handleOnBackPressed() {
             Log.w(TAG, "backPressedCallback: call")
@@ -131,7 +151,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                     fragment.findNavController().navigate(R.id.action_characterListThreeFragment_to_characterListMainFragment)
                 }
                 is CharacterListFourFragment -> {
+
                     fragment.findNavController().navigate(R.id.action_characterListFourFragment_to_characterListMainFragment)
+                }
+                is CharacterListFiveFragment -> {
+                    fragment.findNavController().navigate(R.id.action_characterListFiveFragment_to_characterListMainFragment)
+                }
+                is CharacterListSixFragment -> {
+                    fragment.findNavController().navigate(R.id.action_characterListSixFragment_to_characterListMainFragment)
                 }
                 else -> {
                     closeBackPressed.onBackPressed()
@@ -160,6 +187,12 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                 }
                 is CharacterListFourFragment -> {
                     fragment.findNavController().navigate(R.id.action_characterListFourFragment_to_characterListMainFragment)
+                }
+                is CharacterListFiveFragment -> {
+                    fragment.findNavController().navigate(R.id.action_characterListFiveFragment_to_characterListMainFragment)
+                }
+                is CharacterListSixFragment -> {
+                    fragment.findNavController().navigate(R.id.action_characterListSixFragment_to_characterListMainFragment)
                 }
                 else -> {
                     closeBackPressed.onBackPressed()

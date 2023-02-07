@@ -1,9 +1,11 @@
 package com.example.makemon.di.module
 
 import com.example.makemon.ui.MainFragment
+import com.example.makemon.ui.character_list.CharacterListFiveFragment
 import com.example.makemon.ui.character_list.CharacterListFourFragment
 import com.example.makemon.ui.character_list.CharacterListMainFragment
 import com.example.makemon.ui.character_list.CharacterListOneFragment
+import com.example.makemon.ui.character_list.CharacterListSixFragment
 import com.example.makemon.ui.character_list.CharacterListThreeFragment
 import com.example.makemon.ui.character_list.CharacterListTwoFragment
 import com.example.makemon.ui.settings.SettingsFragment
@@ -30,4 +32,10 @@ abstract class MainProvider {
 
     @ContributesAndroidInjector(modules = [])
     abstract fun provideCharacterListFourFragment() : CharacterListFourFragment
+
+    @ContributesAndroidInjector(modules = [])
+    abstract fun provideCharacterListFiveFragment() : CharacterListFiveFragment
+
+    @ContributesAndroidInjector(modules = [])
+    abstract fun provideCharacterListSixFragment() : CharacterListSixFragment
 }
