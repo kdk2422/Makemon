@@ -7,6 +7,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.example.makemon.R
@@ -86,10 +88,10 @@ class CharacterListFourFragment : Fragment(), View.OnClickListener {
             override fun afterTextChanged(s: Editable?) {
                 pageIndex = s.toString()
                 if (s.toString().length > 2) {
-                    binding.textInputLayer.error = "2자리 까지 입력 가능합니다."
+                    binding.textInputLayer.error = getString(R.string.list_search_error_text_one)
                     binding.btMove.isClickable = false
                 } else if (s.toString().length >= 2 && s.toString() > 30.toString()) {
-                    binding.textInputLayer.error = "입력이 가능한 값은 30이 최대입니다"
+                    binding.textInputLayer.error = getString(R.string.list_search_error_text_two)
                     binding.btMove.isClickable = false
                 }
                 else {
@@ -98,6 +100,17 @@ class CharacterListFourFragment : Fragment(), View.OnClickListener {
                 }
             }
         })
+
+        binding.editPage.setOnEditorActionListener { _, actionId, _ ->
+            var handle = false
+            when(actionId) {
+                EditorInfo.IME_ACTION_DONE -> {
+                    binding.viewPager.currentItem = pageIndex.toInt() - 1
+                    handle = true
+                }
+            }
+            handle
+        }
     }
 
     override fun onResume() {
@@ -109,7 +122,10 @@ class CharacterListFourFragment : Fragment(), View.OnClickListener {
         if (v != null) {
             when(v.id) {
                 R.id.btMove -> {
-                    if (binding.editPage.text.toString().isEmpty()) return
+                    if (binding.editPage.text.toString().isEmpty()) {
+                        Toast.makeText(requireActivity(), getString(R.string.list_search_impty_text), Toast.LENGTH_SHORT).show()
+                        return
+                    }
                     binding.viewPager.currentItem = pageIndex.toInt() - 1
                 }
             }

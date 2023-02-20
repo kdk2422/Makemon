@@ -4,6 +4,7 @@ import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
@@ -55,6 +56,14 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val action: String? = intent.action
+        val uriData: Uri? = intent.data
+
+        if (action == Intent.ACTION_VIEW) {
+            val data = uriData?.getQueryParameter("data")
+            Log.w("SplashActivity", "data: $data")
+        }
+
         closeBackPressed = CloseBackPressed(this)
 
         binding.icon.animate().scaleX(1f)
@@ -87,7 +96,6 @@ class SplashActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }, 3000)
-
     }
 
     private val backPressedCallback = object : OnBackPressedCallback(true) {

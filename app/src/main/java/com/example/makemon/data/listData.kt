@@ -806,7 +806,7 @@ var listDataTwo = listOf(
 
 var listDataThree = listOf(
     Character(
-        R.drawable.item1,
+        R.drawable.item61,
         information = listOf(
             Information(
                 kind = "TEST Kind61",
@@ -819,7 +819,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item2,
+        R.drawable.item62,
         information = listOf(
             Information(
                 kind = "TEST Kind2",
@@ -832,7 +832,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item63,
         information = listOf(
             Information(
                 kind = "TEST Kind3",
@@ -845,7 +845,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item64,
         information = listOf(
             Information(
                 kind = "TEST Kind4",
@@ -858,7 +858,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item65,
         information = listOf(
             Information(
                 kind = "TEST Kind5",
@@ -871,7 +871,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item66,
         information = listOf(
             Information(
                 kind = "TEST Kind6",
@@ -884,7 +884,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item67,
         information = listOf(
             Information(
                 kind = "TEST Kind7",
@@ -897,7 +897,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item68,
         information = listOf(
             Information(
                 kind = "TEST Kind8",
@@ -910,7 +910,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item69,
         information = listOf(
             Information(
                 kind = "TEST Kind9",
@@ -923,7 +923,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item70,
         information = listOf(
             Information(
                 kind = "TEST Kind10",
@@ -936,7 +936,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item71,
         information = listOf(
             Information(
                 kind = "TEST Kind11",
@@ -949,7 +949,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item72,
         information = listOf(
             Information(
                 kind = "TEST Kind12",
@@ -962,7 +962,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item73,
         information = listOf(
             Information(
                 kind = "TEST Kind13",
@@ -975,7 +975,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item74,
         information = listOf(
             Information(
                 kind = "TEST Kind14",
@@ -988,7 +988,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item75,
         information = listOf(
             Information(
                 kind = "TEST Kind15",
@@ -1001,7 +1001,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item76,
         information = listOf(
             Information(
                 kind = "TEST Kind16",
@@ -1014,7 +1014,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item77,
         information = listOf(
             Information(
                 kind = "TEST Kind17",
@@ -1027,7 +1027,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item78,
         information = listOf(
             Information(
                 kind = "TEST Kind18",
@@ -1040,7 +1040,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item79,
         information = listOf(
             Information(
                 kind = "TEST Kind19",
@@ -1053,7 +1053,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item80,
         information = listOf(
             Information(
                 kind = "TEST Kind20",
@@ -1066,7 +1066,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item81,
         information = listOf(
             Information(
                 kind = "TEST Kind21",
@@ -1079,7 +1079,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item82,
         information = listOf(
             Information(
                 kind = "TEST Kind22",
@@ -1092,7 +1092,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item83,
         information = listOf(
             Information(
                 kind = "TEST Kind23",
@@ -1105,7 +1105,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item84,
         information = listOf(
             Information(
                 kind = "TEST Kind24",
@@ -1118,7 +1118,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item85,
         information = listOf(
             Information(
                 kind = "TEST Kind25",
@@ -1131,7 +1131,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item86,
         information = listOf(
             Information(
                 kind = "TEST Kind26",
@@ -1144,7 +1144,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item87,
         information = listOf(
             Information(
                 kind = "TEST Kind27",
@@ -1157,7 +1157,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item88,
         information = listOf(
             Information(
                 kind = "TEST Kind28",
@@ -1170,7 +1170,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item89,
         information = listOf(
             Information(
                 kind = "TEST Kind29",
@@ -1183,7 +1183,7 @@ var listDataThree = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item90,
         information = listOf(
             Information(
                 kind = "TEST Kind90",
@@ -1200,7 +1200,7 @@ var listDataThree = listOf(
 
 var listDataFour = listOf(
     Character(
-        R.drawable.item1,
+        R.drawable.item91,
         information = listOf(
             Information(
                 kind = "TEST Kind91",
@@ -1213,7 +1213,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item2,
+        R.drawable.item92,
         information = listOf(
             Information(
                 kind = "TEST Kind2",
@@ -1226,7 +1226,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item93,
         information = listOf(
             Information(
                 kind = "TEST Kind3",
@@ -1239,7 +1239,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item94,
         information = listOf(
             Information(
                 kind = "TEST Kind4",
@@ -1252,7 +1252,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item95,
         information = listOf(
             Information(
                 kind = "TEST Kind5",
@@ -1265,7 +1265,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item96,
         information = listOf(
             Information(
                 kind = "TEST Kind6",
@@ -1278,7 +1278,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item97,
         information = listOf(
             Information(
                 kind = "TEST Kind7",
@@ -1291,7 +1291,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item98,
         information = listOf(
             Information(
                 kind = "TEST Kind8",
@@ -1304,7 +1304,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item99,
         information = listOf(
             Information(
                 kind = "TEST Kind9",
@@ -1317,7 +1317,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item100,
         information = listOf(
             Information(
                 kind = "TEST Kind10",
@@ -1330,7 +1330,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item101,
         information = listOf(
             Information(
                 kind = "TEST Kind11",
@@ -1343,7 +1343,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item102,
         information = listOf(
             Information(
                 kind = "TEST Kind12",
@@ -1356,7 +1356,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item103,
         information = listOf(
             Information(
                 kind = "TEST Kind13",
@@ -1369,7 +1369,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item104,
         information = listOf(
             Information(
                 kind = "TEST Kind14",
@@ -1382,7 +1382,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item105,
         information = listOf(
             Information(
                 kind = "TEST Kind15",
@@ -1395,7 +1395,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item106,
         information = listOf(
             Information(
                 kind = "TEST Kind16",
@@ -1408,7 +1408,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item107,
         information = listOf(
             Information(
                 kind = "TEST Kind17",
@@ -1421,7 +1421,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item108,
         information = listOf(
             Information(
                 kind = "TEST Kind18",
@@ -1434,7 +1434,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item109,
         information = listOf(
             Information(
                 kind = "TEST Kind19",
@@ -1447,7 +1447,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item110,
         information = listOf(
             Information(
                 kind = "TEST Kind20",
@@ -1460,7 +1460,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item111,
         information = listOf(
             Information(
                 kind = "TEST Kind21",
@@ -1473,7 +1473,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item112,
         information = listOf(
             Information(
                 kind = "TEST Kind22",
@@ -1486,7 +1486,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item113,
         information = listOf(
             Information(
                 kind = "TEST Kind23",
@@ -1499,7 +1499,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item114,
         information = listOf(
             Information(
                 kind = "TEST Kind24",
@@ -1512,7 +1512,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item115,
         information = listOf(
             Information(
                 kind = "TEST Kind25",
@@ -1525,7 +1525,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item116,
         information = listOf(
             Information(
                 kind = "TEST Kind26",
@@ -1538,7 +1538,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item117,
         information = listOf(
             Information(
                 kind = "TEST Kind27",
@@ -1551,7 +1551,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item118,
         information = listOf(
             Information(
                 kind = "TEST Kind28",
@@ -1564,7 +1564,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item119,
         information = listOf(
             Information(
                 kind = "TEST Kind29",
@@ -1577,7 +1577,7 @@ var listDataFour = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item120,
         information = listOf(
             Information(
                 kind = "TEST Kind120",
@@ -1593,7 +1593,7 @@ var listDataFour = listOf(
 
 var listDataFive = listOf(
     Character(
-        R.drawable.item1,
+        R.drawable.item121,
         information = listOf(
             Information(
                 kind = "TEST Kind121",
@@ -1606,7 +1606,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item2,
+        R.drawable.item122,
         information = listOf(
             Information(
                 kind = "TEST Kind2",
@@ -1619,7 +1619,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item123,
         information = listOf(
             Information(
                 kind = "TEST Kind3",
@@ -1632,7 +1632,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item4,
+        R.drawable.item124,
         information = listOf(
             Information(
                 kind = "TEST Kind4",
@@ -1645,7 +1645,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item5,
+        R.drawable.item125,
         information = listOf(
             Information(
                 kind = "TEST Kind5",
@@ -1658,7 +1658,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item6,
+        R.drawable.item126,
         information = listOf(
             Information(
                 kind = "TEST Kind6",
@@ -1671,7 +1671,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item7,
+        R.drawable.item127,
         information = listOf(
             Information(
                 kind = "TEST Kind7",
@@ -1684,7 +1684,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item8,
+        R.drawable.item128,
         information = listOf(
             Information(
                 kind = "TEST Kind8",
@@ -1697,7 +1697,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item9,
+        R.drawable.item129,
         information = listOf(
             Information(
                 kind = "TEST Kind9",
@@ -1710,7 +1710,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item10,
+        R.drawable.item130,
         information = listOf(
             Information(
                 kind = "TEST Kind10",
@@ -1723,7 +1723,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item11,
+        R.drawable.item131,
         information = listOf(
             Information(
                 kind = "TEST Kind11",
@@ -1736,7 +1736,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item12,
+        R.drawable.item132,
         information = listOf(
             Information(
                 kind = "TEST Kind12",
@@ -1749,7 +1749,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item13,
+        R.drawable.item133,
         information = listOf(
             Information(
                 kind = "TEST Kind13",
@@ -1762,7 +1762,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item14,
+        R.drawable.item134,
         information = listOf(
             Information(
                 kind = "TEST Kind14",
@@ -1775,7 +1775,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item15,
+        R.drawable.item135,
         information = listOf(
             Information(
                 kind = "TEST Kind15",
@@ -1788,7 +1788,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item16,
+        R.drawable.item136,
         information = listOf(
             Information(
                 kind = "TEST Kind16",
@@ -1801,7 +1801,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item17,
+        R.drawable.item137,
         information = listOf(
             Information(
                 kind = "TEST Kind17",
@@ -1814,7 +1814,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item18,
+        R.drawable.item138,
         information = listOf(
             Information(
                 kind = "TEST Kind18",
@@ -1827,7 +1827,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item19,
+        R.drawable.item139,
         information = listOf(
             Information(
                 kind = "TEST Kind19",
@@ -1840,7 +1840,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item20,
+        R.drawable.item140,
         information = listOf(
             Information(
                 kind = "TEST Kind20",
@@ -1853,7 +1853,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item21,
+        R.drawable.item141,
         information = listOf(
             Information(
                 kind = "TEST Kind21",
@@ -1866,7 +1866,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item22,
+        R.drawable.item142,
         information = listOf(
             Information(
                 kind = "TEST Kind22",
@@ -1879,7 +1879,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item23,
+        R.drawable.item143,
         information = listOf(
             Information(
                 kind = "TEST Kind23",
@@ -1892,7 +1892,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item24,
+        R.drawable.item144,
         information = listOf(
             Information(
                 kind = "TEST Kind24",
@@ -1905,7 +1905,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item25,
+        R.drawable.item145,
         information = listOf(
             Information(
                 kind = "TEST Kind25",
@@ -1918,7 +1918,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item26,
+        R.drawable.item146,
         information = listOf(
             Information(
                 kind = "TEST Kind26",
@@ -1931,7 +1931,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item27,
+        R.drawable.item147,
         information = listOf(
             Information(
                 kind = "TEST Kind27",
@@ -1944,7 +1944,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item28,
+        R.drawable.item148,
         information = listOf(
             Information(
                 kind = "TEST Kind28",
@@ -1957,7 +1957,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item29,
+        R.drawable.item149,
         information = listOf(
             Information(
                 kind = "TEST Kind29",
@@ -1970,7 +1970,7 @@ var listDataFive = listOf(
         )
     ),
     Character(
-        R.drawable.item30,
+        R.drawable.item150,
         information = listOf(
             Information(
                 kind = "TEST Kind150",
@@ -1986,7 +1986,7 @@ var listDataFive = listOf(
 
 var listDataSix = listOf(
     Character(
-        R.drawable.item1,
+        R.drawable.item151,
         information = listOf(
             Information(
                 kind = "TEST Kind151",
@@ -1999,7 +1999,7 @@ var listDataSix = listOf(
         )
     ),
     Character(
-        R.drawable.item2,
+        R.drawable.item152,
         information = listOf(
             Information(
                 kind = "TEST Kind2",
@@ -2012,7 +2012,7 @@ var listDataSix = listOf(
         )
     ),
     Character(
-        R.drawable.item3,
+        R.drawable.item153,
         information = listOf(
             Information(
                 kind = "TEST Kind3",
@@ -2025,7 +2025,7 @@ var listDataSix = listOf(
         )
     ),
     Character(
-        R.drawable.item4,
+        R.drawable.item154,
         information = listOf(
             Information(
                 kind = "TEST Kind4",
@@ -2038,7 +2038,7 @@ var listDataSix = listOf(
         )
     ),
     Character(
-        R.drawable.item5,
+        R.drawable.item155,
         information = listOf(
             Information(
                 kind = "TEST Kind5",
@@ -2051,7 +2051,7 @@ var listDataSix = listOf(
         )
     ),
     Character(
-        R.drawable.item6,
+        R.drawable.item156,
         information = listOf(
             Information(
                 kind = "TEST Kind6",
@@ -2064,7 +2064,7 @@ var listDataSix = listOf(
         )
     ),
     Character(
-        R.drawable.item7,
+        R.drawable.item157,
         information = listOf(
             Information(
                 kind = "TEST Kind7",
@@ -2077,7 +2077,7 @@ var listDataSix = listOf(
         )
     ),
     Character(
-        R.drawable.item8,
+        R.drawable.item158,
         information = listOf(
             Information(
                 kind = "TEST Kind8",
@@ -2090,7 +2090,7 @@ var listDataSix = listOf(
         )
     ),
     Character(
-        R.drawable.item9,
+        R.drawable.item159,
         information = listOf(
             Information(
                 kind = "TEST Kind9",
@@ -2103,7 +2103,7 @@ var listDataSix = listOf(
         )
     ),
     Character(
-        R.drawable.item10,
+        R.drawable.item160,
         information = listOf(
             Information(
                 kind = "TEST Kind10",
@@ -2116,7 +2116,7 @@ var listDataSix = listOf(
         )
     ),
     Character(
-        R.drawable.item11,
+        R.drawable.item161,
         information = listOf(
             Information(
                 kind = "TEST Kind11",
@@ -2125,253 +2125,6 @@ var listDataSix = listOf(
                 rank = "TEST Rank11",
                 word = "TEST Word11",
                 info = "TEST Info11"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item12,
-        information = listOf(
-            Information(
-                kind = "TEST Kind12",
-                tribe = "TEST Tribe12",
-                gender = "TEST Gender12",
-                rank = "TEST Rank12",
-                word = "TEST Word12",
-                info = "TEST Info12"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item13,
-        information = listOf(
-            Information(
-                kind = "TEST Kind13",
-                tribe = "TEST Tribe13",
-                gender = "TEST Gender13",
-                rank = "TEST Rank13",
-                word = "TEST Word13",
-                info = "TEST Info13"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item14,
-        information = listOf(
-            Information(
-                kind = "TEST Kind14",
-                tribe = "TEST Tribe14",
-                gender = "TEST Gender14",
-                rank = "TEST Rank14",
-                word = "TEST Word14",
-                info = "TEST Info14"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item15,
-        information = listOf(
-            Information(
-                kind = "TEST Kind15",
-                tribe = "TEST Tribe15",
-                gender = "TEST Gender15",
-                rank = "TEST Rank15",
-                word = "TEST Word15",
-                info = "TEST Info15"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item16,
-        information = listOf(
-            Information(
-                kind = "TEST Kind16",
-                tribe = "TEST Tribe16",
-                gender = "TEST Gender16",
-                rank = "TEST Rank16",
-                word = "TEST Word16",
-                info = "TEST Info16"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item17,
-        information = listOf(
-            Information(
-                kind = "TEST Kind17",
-                tribe = "TEST Tribe17",
-                gender = "TEST Gender17",
-                rank = "TEST Rank17",
-                word = "TEST Word17",
-                info = "TEST Info17"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item18,
-        information = listOf(
-            Information(
-                kind = "TEST Kind18",
-                tribe = "TEST Tribe18",
-                gender = "TEST Gender18",
-                rank = "TEST Rank18",
-                word = "TEST Word18",
-                info = "TEST Info18"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item19,
-        information = listOf(
-            Information(
-                kind = "TEST Kind19",
-                tribe = "TEST Tribe19",
-                gender = "TEST Gender19",
-                rank = "TEST Rank19",
-                word = "TEST Word19",
-                info = "TEST Info19"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item20,
-        information = listOf(
-            Information(
-                kind = "TEST Kind20",
-                tribe = "TEST Tribe20",
-                gender = "TEST Gender20",
-                rank = "TEST Rank20",
-                word = "TEST Word20",
-                info = "TEST Info20"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item21,
-        information = listOf(
-            Information(
-                kind = "TEST Kind21",
-                tribe = "TEST Tribe21",
-                gender = "TEST Gender21",
-                rank = "TEST Rank21",
-                word = "TEST Word21",
-                info = "TEST Info21"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item22,
-        information = listOf(
-            Information(
-                kind = "TEST Kind22",
-                tribe = "TEST Tribe22",
-                gender = "TEST Gender22",
-                rank = "TEST Rank22",
-                word = "TEST Word22",
-                info = "TEST Info22"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item23,
-        information = listOf(
-            Information(
-                kind = "TEST Kind23",
-                tribe = "TEST Tribe23",
-                gender = "TEST Gender23",
-                rank = "TEST Rank23",
-                word = "TEST Word23",
-                info = "TEST Info23"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item24,
-        information = listOf(
-            Information(
-                kind = "TEST Kind24",
-                tribe = "TEST Tribe24",
-                gender = "TEST Gender24",
-                rank = "TEST Rank24",
-                word = "TEST Word24",
-                info = "TEST Info24"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item25,
-        information = listOf(
-            Information(
-                kind = "TEST Kind25",
-                tribe = "TEST Tribe25",
-                gender = "TEST Gender25",
-                rank = "TEST Rank25",
-                word = "TEST Word25",
-                info = "TEST Info25"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item26,
-        information = listOf(
-            Information(
-                kind = "TEST Kind26",
-                tribe = "TEST Tribe26",
-                gender = "TEST Gender26",
-                rank = "TEST Rank26",
-                word = "TEST Word26",
-                info = "TEST Info26"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item27,
-        information = listOf(
-            Information(
-                kind = "TEST Kind27",
-                tribe = "TEST Tribe27",
-                gender = "TEST Gender27",
-                rank = "TEST Rank27",
-                word = "TEST Word27",
-                info = "TEST Info27"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item28,
-        information = listOf(
-            Information(
-                kind = "TEST Kind28",
-                tribe = "TEST Tribe28",
-                gender = "TEST Gender28",
-                rank = "TEST Rank28",
-                word = "TEST Word28",
-                info = "TEST Info28"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item29,
-        information = listOf(
-            Information(
-                kind = "TEST Kind29",
-                tribe = "TEST Tribe29",
-                gender = "TEST Gender29",
-                rank = "TEST Rank29",
-                word = "TEST Word29",
-                info = "TEST Info29"
-            )
-        )
-    ),
-    Character(
-        R.drawable.item30,
-        information = listOf(
-            Information(
-                kind = "TEST Kind180",
-                tribe = "TEST Tribe180",
-                gender = "TEST Gender180",
-                rank = "TEST Rank180",
-                word = "TEST Word180",
-                info = "TEST Info180"
             )
         )
     )

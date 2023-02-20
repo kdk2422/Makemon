@@ -15,7 +15,7 @@ class ScrollTextView(context: Context, attrs: AttributeSet?, defStyle: Int) :
     private var mSlr: Scroller? = null
 
     // milliseconds for a round of scrolling
-    var rndDuration = 7000
+    var rndDuration = 5000
 
     // the X offset when paused
     private var mXPaused = 0
@@ -125,7 +125,8 @@ class ScrollTextView(context: Context, attrs: AttributeSet?, defStyle: Int) :
     /*
      * override the computeScroll to restart scrolling when finished so as that
      * the text is scrolled forever
-     */  override fun computeScroll() {
+     */
+    override fun computeScroll() {
         super.computeScroll()
         if (null == mSlr) return
         if (mSlr!!.isFinished && !isPaused) {

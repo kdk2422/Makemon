@@ -3,7 +3,7 @@
 
     <string name="appbar_title_home">Home</string>
     <string name="appbar_title_list">illustrated list</string>
-    <string name="appbar_title_settings">Settings</string>
+    <string name="appbar_title_settings">More information</string>
 
     <string name="menu_one">list 1</string>
     <string name="menu_two">list 2</string>
@@ -16,5 +16,16 @@
 
     <string name="bottom_navigation_home_text">Home</string>
     <string name="bottom_navigation_list_text">illustrated list</string>
-    <string name="bottom_navigation_settings_text">Settings</string>
+    <string name="bottom_navigation_settings_text">More information</string>
+
+    <string name="scroll_text">I dedicate this app to [Bayachao].</string>
+
+    <string name="list_search_text">Please enter the desired page.</string>
+    <string name="list_search_error_text_one">You can enter up to 2 digits.</string>
+    <string name="list_search_error_text_two">The maximum value that can be entered is 30.</string>
+    <string name="list_search_error_text_two_2">The maximum value that can be entered is 11.</string>
+    <string name="list_search_button_text">move</string>
+    <string name="list_search_impty_text">Please enter the page you want to move to first.</string>
+    
+    <string name="list_announcement">Please note that the characters in the list are created based on the Wix site, so there may be missing characters.\n\nIt will be added as soon as the site character information is updated.</string>
 </resources>

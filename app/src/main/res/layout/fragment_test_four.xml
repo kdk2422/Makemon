@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/view_bg_color"
+    android:animateLayoutChanges="true"
+    android:id="@+id/mainView">
+
+    <ImageView
+        android:id="@+id/rotationImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_head"
+        app:layout_constraintBottom_toTopOf="@id/scrollImage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.q42.android.scrollingimageview.ScrollingImageView
+        android:id="@+id/scrollImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:source="@drawable/ic_settings"
+        app:speed="500dp"/>
+
+    <com.example.makemon.customView.ScrollTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollTextTwo"
+        android:singleLine="true"
+        android:text="세상이 돈다~"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/rotationImage"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,7 @@ import com.example.makemon.di.module.SplashModule
 import com.example.makemon.ui.MainActivity
 import com.example.makemon.ui.settings.SettingsActivity
 import com.example.makemon.ui.splash.SplashActivity
+import com.example.makemon.ui.settings.test.TestDialog
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

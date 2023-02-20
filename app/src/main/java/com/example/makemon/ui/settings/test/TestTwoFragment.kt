@@ -1,14 +1,20 @@
-package com.example.makemon.ui.test
+package com.example.makemon.ui.settings.test
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.media.MediaScannerConnection
+import android.os.Build
 import android.os.Bundle
 import android.os.Environment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.example.makemon.R
@@ -47,7 +53,7 @@ class TestTwoFragment : Fragment(), View.OnClickListener {
 
     override fun onResume() {
         super.onResume()
-
+        permission()
     }
 
     override fun onClick(v: View?) {
@@ -100,5 +106,36 @@ class TestTwoFragment : Fragment(), View.OnClickListener {
             e.printStackTrace()
         }
         return file
+    }
+
+    private fun permission() {
+        //Note: 다중 퍼미션 권한 체크 로직
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            requestPermission.launch(
+                arrayOf(
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.READ_EXTERNAL_STORAGE,
+                    Manifest.permission.READ_MEDIA_IMAGES
+                )
+            )
+        } else {
+            requestPermission.launch(
+                arrayOf(
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.READ_EXTERNAL_STORAGE
+                )
+            )
+        }
+    }
+
+    private val requestPermission = registerForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) {
+        for (entry in it.entries) {
+            Log.w("TestTwoFragment", "onActivityResult:: ${entry.key} = ${entry.value}")
+            if (!entry.value) {
+                requireActivity().onBackPressed()
+            }
+        }
     }
 }

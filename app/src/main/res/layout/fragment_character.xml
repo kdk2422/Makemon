@@ -58,7 +58,7 @@
             android:id="@+id/editPage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="원하는 페이지를 입력하세요."
+            android:hint="@string/list_search_text"
             android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -69,7 +69,7 @@
         android:layout_height="0dp"
         android:layout_margin="15dp"
         android:gravity="center_vertical"
-        android:text="이동"
+        android:text="@string/list_search_button_text"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />

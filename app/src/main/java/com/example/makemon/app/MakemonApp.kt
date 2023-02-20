@@ -1,3 +1,8 @@
+/*
+ * Create by kirby on 2023. 1. 12.
+ * Copyright (c) 2023. kirby. All rights reserved.
+ */
+
 package com.example.makemon.app
 
 import android.app.Application

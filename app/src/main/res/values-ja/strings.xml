@@ -3,7 +3,7 @@
 
     <string name="appbar_title_home">ホーム画面</string>
     <string name="appbar_title_list">図鑑 リスト</string>
-    <string name="appbar_title_settings">設定</string>
+    <string name="appbar_title_settings">詳細情報</string>
 
     <string name="menu_one">リスト 1</string>
     <string name="menu_two">リスト 2</string>
@@ -16,5 +16,16 @@
 
     <string name="bottom_navigation_home_text">ホーム画面</string>
     <string name="bottom_navigation_list_text">図鑑 リスト</string>
-    <string name="bottom_navigation_settings_text">設定</string>
+    <string name="bottom_navigation_settings_text">詳細情報</string>
+
+    <string name="scroll_text">このアプリを[ばやちゃお]さんに捧げます。</string>
+
+    <string name="list_search_text">希望のページを入力してください。</string>
+    <string name="list_search_error_text_one">2桁まで入力可能です。</string>
+    <string name="list_search_error_text_two">入力可能な値は 30 が最大です。</string>
+    <string name="list_search_error_text_two_2">入力可能な値は 11 が最大です。</string>
+    <string name="list_search_button_text">移動</string>
+    <string name="list_search_impty_text">移動するページを先に入力してください。</string>
+
+    <string name="list_announcement">リスト内部のキャラクターはWixサイトを基準に作成し、欠けているキャラクターが存在する可能性があることを参考にしてください。\n\nサイトキャラクター情報が更新されると追加予定です。</string>
 </resources>

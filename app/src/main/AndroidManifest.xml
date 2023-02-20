@@ -17,6 +17,9 @@
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:name=".app.MakemonApp"
         android:allowBackup="false"
@@ -38,11 +41,23 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="makemon"
+                    android:host="test" />
+            </intent-filter>
         </activity>
+
         <activity
             android:name=".ui.MainActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.settings.SettingsActivity"
             android:exported="false"

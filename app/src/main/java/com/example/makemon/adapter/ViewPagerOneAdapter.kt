@@ -1,5 +1,6 @@
 package com.example.makemon.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -17,9 +18,10 @@ class ViewPagerOneAdapter : RecyclerView.Adapter<ViewPagerOneAdapter.ViewHolder>
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(data[position % listDataOne.size], position)
+        Log.w("ViewPagerOneAdapter", "listDataOne: ${listDataOne.size}")
     }
 
-    override fun getItemCount(): Int = 30
+    override fun getItemCount(): Int = listDataOne.size
 
     override fun getItemId(position: Int): Long {
         return super.getItemId(position)

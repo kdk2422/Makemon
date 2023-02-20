@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.window.layout.WindowMetricsCalculator
@@ -26,7 +27,6 @@ class CharacterListMainFragment : Fragment(), View.OnClickListener {
     private var menuActive: Boolean = false
     private var displayWidth: Float = 0f
     private var displayHeight: Float = 0f
-    private var testDiagonal: Float = 0f
     private var testFour: Float = 0f
 
     private var testDisplay: Float = 0f
@@ -43,7 +43,6 @@ class CharacterListMainFragment : Fragment(), View.OnClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.d(TAG, "onViewCreated")
 
         with(requireActivity() as MainActivity) {
             bottomNavigationVisibility(true)
@@ -62,7 +61,6 @@ class CharacterListMainFragment : Fragment(), View.OnClickListener {
 
     override fun onResume() {
         super.onResume()
-        Log.d(TAG, "onResume")
 
         val metrics = WindowMetricsCalculator.getOrCreate().computeCurrentWindowMetrics(requireActivity())
 
@@ -84,12 +82,10 @@ class CharacterListMainFragment : Fragment(), View.OnClickListener {
         Log.w(TAG, "testDisplay: $testDisplay")
         Log.w(TAG, "testDisplayTwo: $testDisplayTwo")
 
-        val test = displayWidth * displayWidth
-        val testTwo = displayHeight * displayHeight
-        val testThree = test + testTwo
+        val sqrtDisplayWidth = sqrt(displayWidth)
+        val sqrtDisplayHeight = sqrt(displayHeight)
+        val testThree = sqrtDisplayWidth + sqrtDisplayHeight
         testFour = sqrt(testThree)
-        Log.w(TAG, "testFour: $testFour")
-        testDiagonal = testFour / 10
     }
 
     override fun onClick(v: View?) {

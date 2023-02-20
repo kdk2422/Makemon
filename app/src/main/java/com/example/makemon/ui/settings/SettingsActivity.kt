@@ -16,9 +16,9 @@ import com.example.makemon.ui.character_list.CharacterListFourFragment
 import com.example.makemon.ui.character_list.CharacterListOneFragment
 import com.example.makemon.ui.character_list.CharacterListThreeFragment
 import com.example.makemon.ui.character_list.CharacterListTwoFragment
-import com.example.makemon.ui.test.TestFragment
-import com.example.makemon.ui.test.TestThreeFragment
-import com.example.makemon.ui.test.TestTwoFragment
+import com.example.makemon.ui.settings.test.TestFragment
+import com.example.makemon.ui.settings.test.TestThreeFragment
+import com.example.makemon.ui.settings.test.TestTwoFragment
 import com.example.makemon.utils.CloseBackPressed
 
 class SettingsActivity : BaseActivity<ActivitySettingsBinding>() {
