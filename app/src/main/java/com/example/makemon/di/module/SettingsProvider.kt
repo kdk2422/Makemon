@@ -1,7 +1,7 @@
 package com.example.makemon.di.module
 
 import com.example.makemon.ui.settings.SettingsFragment
-import com.example.makemon.ui.settings.test.TestDialog
+import com.example.makemon.ui.settings.test.TestEightFragment
 import com.example.makemon.ui.settings.test.TestFiveFragment
 import com.example.makemon.ui.settings.test.TestFourFragment
 import com.example.makemon.ui.settings.test.TestFragment
@@ -38,4 +38,7 @@ abstract class SettingsProvider {
 
     @ContributesAndroidInjector(modules = [])
     abstract fun provideTestSevenFragment() : TestSevenFragment
+
+    @ContributesAndroidInjector(modules = [])
+    abstract fun provideTestEightFragment() : TestEightFragment
 }

@@ -31,6 +31,12 @@
         <action
             android:id="@+id/action_settingsFragment_to_testSevenFragment"
             app:destination="@id/testSevenFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testEightFragment"
+            app:destination="@id/testEightFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testNineFragment"
+            app:destination="@id/testNineFragment" />
     </fragment>
     <fragment
         android:id="@+id/testFragment"
@@ -65,5 +71,16 @@
     <fragment
         android:id="@+id/testSevenFragment"
         android:name="com.example.makemon.ui.settings.test.TestSevenFragment"
-        android:label="TestSevenFragment" />
+        android:label="TestSevenFragment"
+        tools:layout="@layout/fragment_test_seven"/>
+    <fragment
+        android:id="@+id/testEightFragment"
+        android:name="com.example.makemon.ui.settings.test.TestEightFragment"
+        android:label="TestEightFragment"
+        tools:layout="@layout/fragment_test_eight"/>
+    <fragment
+        android:id="@+id/testNineFragment"
+        android:name="com.example.makemon.ui.settings.test.TestNineFragment"
+        android:label="TestNineFragment"
+        tools:layout="@layout/fragment_test_nine"/>
 </navigation>

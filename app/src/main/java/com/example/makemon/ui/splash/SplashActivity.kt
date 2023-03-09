@@ -36,6 +36,8 @@ import com.example.makemon.ui.character_list.CharacterListSixFragment
 import com.example.makemon.ui.character_list.CharacterListThreeFragment
 import com.example.makemon.ui.character_list.CharacterListTwoFragment
 import com.example.makemon.utils.CloseBackPressed
+import com.google.firebase.dynamiclinks.ktx.dynamicLinks
+import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.NonCancellable.start
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -55,14 +57,6 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val action: String? = intent.action
-        val uriData: Uri? = intent.data
-
-        if (action == Intent.ACTION_VIEW) {
-            val data = uriData?.getQueryParameter("data")
-            Log.w("SplashActivity", "data: $data")
-        }
 
         closeBackPressed = CloseBackPressed(this)
 

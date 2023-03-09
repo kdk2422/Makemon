@@ -1,6 +1,5 @@
 package com.example.makemon.ui.character_list
 
-import android.content.SharedPreferences.Editor
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -8,16 +7,18 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.WindowManager
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.viewpager2.widget.ViewPager2
 import com.example.makemon.R
 import com.example.makemon.adapter.ViewPagerOneAdapter
 import com.example.makemon.databinding.FragmentCharacterBinding
 import com.example.makemon.ui.MainActivity
 import com.example.makemon.utils.hideKeyboard
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class CharacterListOneFragment : Fragment(), View.OnClickListener {
 
@@ -26,6 +27,8 @@ class CharacterListOneFragment : Fragment(), View.OnClickListener {
     private var pagerAdapter: ViewPagerOneAdapter? = null
 
     private var pageIndex: String = ""
+
+    private var toastShowing: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -107,6 +110,7 @@ class CharacterListOneFragment : Fragment(), View.OnClickListener {
             when(actionId) {
                 EditorInfo.IME_ACTION_DONE -> {
                     binding.viewPager.currentItem = pageIndex.toInt() - 1
+                    requireActivity().hideKeyboard()
                     handle = true
                 }
             }
@@ -123,7 +127,16 @@ class CharacterListOneFragment : Fragment(), View.OnClickListener {
             when(v.id) {
                 R.id.btMove -> {
                     if (binding.editPage.text.toString().isEmpty()) {
-                        Toast.makeText(requireActivity(), getString(R.string.list_search_impty_text), Toast.LENGTH_SHORT).show()
+                        lifecycleScope.launch {
+                            if (toastShowing) return@launch
+                            if (!toastShowing) {
+                                Toast.makeText(requireActivity(), getString(R.string.list_search_impty_text), Toast.LENGTH_SHORT).show().apply {
+                                    toastShowing = true
+                                }
+                            }
+                            delay(2000)
+                            toastShowing = false
+                        }
                         return
                     }
                     binding.viewPager.currentItem = pageIndex.toInt() - 1

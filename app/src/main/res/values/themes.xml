@@ -37,6 +37,15 @@
         <item name="android:windowBackground">@color/white_opacity_80</item>
         <item name="android:statusBarColor">@color/status_bar_color</item>
     </style>
+    
+    <!--<style name="Scrollbar">
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarStyle">outsideInset</item>
+        <item name="android:fadeScrollbars">false</item>
+        <item name="android:scrollbarThumbVertical"></item>
+        <item name="android:scrollbarTrackVertical"></item>
+    </style>-->
 
     <!--<style name="Theme.App.Starting" parent="Theme.SplashScreen">
         <item name="android:windowSplashScreenBackground" tools:targetApi="s">@color/splash_bg_color</item>

@@ -4,7 +4,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.makemon.data.Character
+import com.example.makemon.data.CharacterThree
 import com.example.makemon.data.listDataThree
 import com.example.makemon.databinding.RecycleItemBinding
 
@@ -17,7 +17,7 @@ class ViewPagerThreeAdapter : RecyclerView.Adapter<ViewPagerThreeAdapter.ViewHol
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(data[position % listDataThree.size], position)
+        holder.bind(data[position % listDataThree.size])
         Log.w("ViewPagerFiveAdapter", "listDataThree: ${listDataThree.size}")
     }
 
@@ -28,9 +28,10 @@ class ViewPagerThreeAdapter : RecyclerView.Adapter<ViewPagerThreeAdapter.ViewHol
     }
 
     inner class ViewHolder(private val binding: RecycleItemBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(data: Character, index: Int){
+        fun bind(data: CharacterThree){
+            binding.title.setText(data.title)
             binding.itemImage.setImageResource(data.image)
-            binding.textKind.text = data.information[0].kind
+            binding.textName.setText(data.information[0].name)
             binding.textTribe.text = data.information[0].tribe
             binding.textGender.text = data.information[0].gender
             binding.textRank.text = data.information[0].rank

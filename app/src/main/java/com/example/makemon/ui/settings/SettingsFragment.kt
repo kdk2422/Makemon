@@ -61,6 +61,8 @@ class SettingsFragment : Fragment(), View.OnClickListener {
         binding.testFive.setOnClickListener(this)
         binding.testSix.setOnClickListener(this)
         binding.testSeven.setOnClickListener(this)
+        binding.testEight.setOnClickListener(this)
+        binding.testNine.setOnClickListener(this)
 
     }
 
@@ -149,6 +151,14 @@ class SettingsFragment : Fragment(), View.OnClickListener {
                 R.id.testSeven -> {
                     NavHostFragment.findNavController(this)
                         .navigate(R.id.action_settingsFragment_to_testSevenFragment)
+                }
+                R.id.testEight -> {
+                    NavHostFragment.findNavController(this)
+                        .navigate(R.id.action_settingsFragment_to_testEightFragment)
+                }
+                R.id.testNine -> {
+                    NavHostFragment.findNavController(this)
+                        .navigate(R.id.action_settingsFragment_to_testNineFragment)
                 }
             }
         }

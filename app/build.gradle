@@ -84,6 +84,7 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:31.2.0')
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-messaging:23.1.1'
+    implementation 'com.google.firebase:firebase-dynamic-links-ktx'
 
     // Room DB
     implementation("androidx.room:room-runtime:2.5.0")
