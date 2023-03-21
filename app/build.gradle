@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'com.google.gms.google-services'
+    id 'kotlin-android'
 }
 
 android {
@@ -55,6 +56,14 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
+
+    /* Libs List */
+    // Indicator
+    implementation 'com.tbuonomo:dotsindicator:4.3'
+    // tooltip
+    implementation "com.github.skydoves:balloon:1.5.2"
+    implementation "com.github.skydoves:balloon:1.5.3-SNAPSHOT"
+
     // noinspection GradleCompatible
     implementation 'com.android.support:support-compat:25.0.0'
 
@@ -63,9 +72,10 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
 
     // Dagger
-    implementation 'com.google.dagger:dagger:2.44.2'
-    implementation 'com.google.dagger:dagger-android-support:2.44.2'
-    kapt 'com.google.dagger:dagger-compiler:2.23.2'
+    implementation "com.google.dagger:dagger:2.23.2"
+    implementation "com.google.dagger:dagger-android:2.23.2"
+    implementation "com.google.dagger:dagger-android-support:2.23.2"
+    kapt "com.google.dagger:dagger-compiler:2.23.2"
     kapt "com.google.dagger:dagger-android-processor:2.23.2"
 
     // Splash
@@ -77,13 +87,10 @@ dependencies {
     // ViewPager
     implementation 'androidx.viewpager2:viewpager2:1.1.0-beta01'
 
-    // Indicator Libs
-    implementation 'com.tbuonomo:dotsindicator:4.3'
-
     // Firebase
     implementation platform('com.google.firebase:firebase-bom:31.2.0')
     implementation 'com.google.firebase:firebase-analytics-ktx'
-    implementation 'com.google.firebase:firebase-messaging:23.1.1'
+    implementation 'com.google.firebase:firebase-messaging:23.1.2'
     implementation 'com.google.firebase:firebase-dynamic-links-ktx'
 
     // Room DB
@@ -115,4 +122,20 @@ dependencies {
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.13.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+
+    /*
+    Copyright 2019 skydoves (Jaewoong Eum)
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+            You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+     */
 }

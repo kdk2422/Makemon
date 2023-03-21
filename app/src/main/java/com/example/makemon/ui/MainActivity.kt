@@ -1,28 +1,21 @@
 package com.example.makemon.ui
 
-import android.Manifest
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.location.Geocoder
-import android.location.Location
-import android.location.LocationListener
-import android.location.LocationManager
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import androidx.activity.OnBackPressedCallback
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.app.ActivityCompat
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.makemon.R
-import com.example.makemon.app.MakemonApp
 import com.example.makemon.databinding.ActivityMainBinding
+import com.example.makemon.di.Injectable
 import com.example.makemon.ui.base.BaseActivity
 import com.example.makemon.ui.character_list.CharacterListFiveFragment
 import com.example.makemon.ui.character_list.CharacterListFourFragment
@@ -33,15 +26,17 @@ import com.example.makemon.ui.character_list.CharacterListTwoFragment
 import com.example.makemon.ui.settings.SettingsActivity
 import com.example.makemon.utils.CloseBackPressed
 import com.google.firebase.messaging.FirebaseMessaging
+import dagger.android.AndroidInjector
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.support.HasSupportFragmentInjector
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import java.util.Locale
+import javax.inject.Inject
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 
 
-class MainActivity : BaseActivity<ActivityMainBinding>() {
+class MainActivity : BaseActivity<ActivityMainBinding>(), Injectable, HasSupportFragmentInjector {
 
     companion object {
         const val TAG = "MainActivity"
@@ -52,6 +47,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     lateinit var navHostFragment: NavHostFragment
 
     private lateinit var closeBackPressed: CloseBackPressed
+
+    @Inject
+    lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
 
     override fun initBinding(inflater: LayoutInflater) = ActivityMainBinding.inflate(inflater)
 
@@ -191,7 +189,44 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     @Deprecated("Deprecated in Android SDK Version 33")
     override fun onBackPressed() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        when (val fragment = navHostFragment.childFragmentManager.fragments[0]) {
+            is CharacterListOneFragment -> {
+                fragment.findNavController()
+                    .navigate(R.id.action_characterListOneFragment_to_characterListMainFragment)
+            }
+
+            is CharacterListTwoFragment -> {
+                fragment.findNavController()
+                    .navigate(R.id.action_characterListTwoFragment_to_characterListMainFragment)
+            }
+
+            is CharacterListThreeFragment -> {
+                fragment.findNavController()
+                    .navigate(R.id.action_characterListThreeFragment_to_characterListMainFragment)
+            }
+
+            is CharacterListFourFragment -> {
+                fragment.findNavController()
+                    .navigate(R.id.action_characterListFourFragment_to_characterListMainFragment)
+            }
+
+            is CharacterListFiveFragment -> {
+                fragment.findNavController()
+                    .navigate(R.id.action_characterListFiveFragment_to_characterListMainFragment)
+            }
+
+            is CharacterListSixFragment -> {
+                fragment.findNavController()
+                    .navigate(R.id.action_characterListSixFragment_to_characterListMainFragment)
+            }
+
+            else -> {
+                closeBackPressed.onBackPressed()
+            }
+        }
+        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             Log.w(TAG, "ANDROID VERSION >= 33")
             this.onBackPressedDispatcher.addCallback(this, backPressedCallback)
         } else {
@@ -233,7 +268,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
                     closeBackPressed.onBackPressed()
                 }
             }
-        }
+        }*/
     }
 
     private suspend fun getTokenResult() = suspendCoroutine<String?> { continuation ->
@@ -249,6 +284,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             }
         }
     }
+
+    override fun supportFragmentInjector(): AndroidInjector<Fragment> = dispatchingAndroidInjector
 
     /*private fun permission() {
         //Note: 다중 퍼미션 권한 체크 로직

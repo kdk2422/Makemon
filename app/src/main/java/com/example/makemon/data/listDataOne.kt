@@ -5,10 +5,11 @@ import com.example.makemon.R
 data class InformationOne(
     val name : Int,
     val tribe: String,
+    val tribeInfo : String,
     val gender: String,
     val rank: String,
     val word: String,
-    val info: String
+    val info: String,
 )
 
 data class CharacterOne(
@@ -25,10 +26,11 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name1,
                 tribe = "페네페네족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString",
                 word = "「모험을 떠나볼까!」",
-                info = "페넨스 성에서 태어난 왕자, 성 밖으로 빠져나갔다가 알트에게 붙잡혀 끌려오는 나날을 보내고 있다. 언젠가 마지리시아 각지를 모험하는 것이 꿈이다. 페넨스빵을 너무 좋아해서 서투른 소환 마법으로 페넨스빵을 닮은 마물을 만들어낸 적도 있다. 마력을 잘 쓰지 못하고, 마법이 서툴기 때문에 꼬리로 공격하는 것을 특기로 삼고 있다."
+                info = "페넨스 성에서 태어난 왕자, 성 밖으로 빠져나갔다가 알트에게 붙잡혀 끌려오는 나날을 보내고 있다. 언젠가 마지리시아 각지를 모험하는 것이 꿈이다. 페넨스빵을 너무 좋아해서 서투른 소환 마법으로 페넨스빵을 닮은 마물을 만들어낸 적도 있다. 마력을 잘 쓰지 못하고, 마법이 서툴기 때문에 꼬리로 공격하는 것을 특기로 삼고 있다.",
             )
         )
     ),
@@ -39,6 +41,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name2,
                 tribe = "페네페네족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString$rankString$rankString",
                 word = "「저 하늘 저편에는 무엇이 있을까...」",
@@ -53,6 +56,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name3,
                 tribe = "토라토라족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString",
                 word = "「야... 오늘도 수행 안 할 거냐!!」",
@@ -67,6 +71,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name4,
                 tribe = "우르우르족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString$rankString$rankString",
                 word = "「너도 차암 성급한 녀석이네~」",
@@ -80,7 +85,8 @@ var listDataOne = listOf(
         information = listOf(
             InformationOne(
                 name = R.string.name5,
-                tribe = "호랑호랑족",
+                tribe = "토라토라족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString$rankString",
                 word = "「네 놈, 나의 하인이 되어라.」",
@@ -95,6 +101,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name6,
                 tribe = "네코네코족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString$rankString$rankString",
                 word = "「루비님, 목소리 낮춰 주십시오.」",
@@ -108,7 +115,8 @@ var listDataOne = listOf(
         information = listOf(
             InformationOne(
                 name = R.string.name7,
-                tribe = "호랑호랑족",
+                tribe = "토라토라족",
+                tribeInfo = "test",
                 gender = femaleString,
                 rank = "$rankString$rankString$rankString$rankString$rankString",
                 word = "「…평안하신지요」",
@@ -122,7 +130,8 @@ var listDataOne = listOf(
         information = listOf(
             InformationOne(
                 name = R.string.name8,
-                tribe = "호랑호랑족",
+                tribe = "토라토라족",
+                tribeInfo = "test",
                 gender = femaleString,
                 rank = rankString,
                 word = "「차 준비가 다 되었어요~♪」",
@@ -136,7 +145,8 @@ var listDataOne = listOf(
         information = listOf(
             InformationOne(
                 name = R.string.name9,
-                tribe = "호스호스족",
+                tribe = "우마우마족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString$rankString",
                 word = "「역시 난 아름다워」",
@@ -150,7 +160,8 @@ var listDataOne = listOf(
         information = listOf(
             InformationOne(
                 name = R.string.name10,
-                tribe = "호스호스족",
+                tribe = "우마우마족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString$rankString",
                 word = "「사피르님, 오늘도 멋집니다요♥」",
@@ -165,6 +176,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name11,
                 tribe = "이누이누족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString",
                 word = "「오늘 저녁은 햄버그다!」",
@@ -179,6 +191,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name12,
                 tribe = "이누이누족",
+                tribeInfo = "test",
                 gender = femaleString,
                 rank = "$rankString$rankString",
                 word = "「오빠... 부끄러우니까 그만둬줘...!」",
@@ -193,6 +206,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name13,
                 tribe = "이누이누족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString",
                 word = "「히스이 님, 에메로드 님, 좋은 아침입니다.」",
@@ -207,6 +221,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name14,
                 tribe = "네코네코족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString",
                 word = "「한 곡 듣고 가실까요?」",
@@ -221,6 +236,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name15,
                 tribe = "네코네코족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString",
                 word = "「제기랄… 왜 또 저 녀석만…」",
@@ -235,6 +251,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name16,
                 tribe = "래비래비족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString$rankString",
                 word = "「얏호~! 난 알렌이야!」",
@@ -249,6 +266,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name17,
                 tribe = "라이라이족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = rankString,
                 word = "「무리야라이... 무서워라이...」",
@@ -263,6 +281,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name18,
                 tribe = "라이라이족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString",
                 word = "「딱히 나는, 주어진 임무를 수행할 뿐이다.」",
@@ -277,6 +296,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name19,
                 tribe = "라이라이족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString$rankString",
                 word = "「흐아암... 졸려...」",
@@ -291,6 +311,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name20,
                 tribe = "네코네코족",
+                tribeInfo = "test",
                 gender = femaleString,
                 rank = "$rankString$rankString$rankString$rankString",
                 word = "「...무슨 일이지?」",
@@ -305,6 +326,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name21,
                 tribe = "네코네코족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString",
                 word = "「앨리스! 그런 얼굴만 하지 말고 좀 웃어보라고!」",
@@ -319,6 +341,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name22,
                 tribe = "래비래비족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString$rankString$rankString",
                 word = "「안녕하세요. 거기있는 아가씨」",
@@ -333,6 +356,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name23,
                 tribe = "이누이누족",
+                tribeInfo = "test",
                 gender = femaleString,
                 rank = "$rankString$rankString$rankString",
                 word = "「세계의 모든 것을 보고 싶습니다.」",
@@ -347,6 +371,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name24,
                 tribe = "네코네코족",
+                tribeInfo = "test",
                 gender = femaleString,
                 rank = rankString,
                 word = "「다음은 천문학 수업임다!」",
@@ -361,6 +386,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name25,
                 tribe = "래비래비족",
+                tribeInfo = "test",
                 gender = femaleString,
                 rank = "$rankString$rankString",
                 word = "「너도 마법사가 되기 위해 왔니?」",
@@ -375,6 +401,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name26,
                 tribe = "래비래비족",
+                tribeInfo = "test",
                 gender = femaleString,
                 rank = "$rankString$rankString",
                 word = "「흥, 이 문제를 당신이 풀 수 있을까?」",
@@ -389,6 +416,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name27,
                 tribe = "헤비헤비족",
+                tribeInfo = "test",
                 gender = femaleString,
                 rank = "$rankString$rankString$rankString$rankString",
                 word = "「뭐 때문이라니? 복수하는 게 당연하잖아.」",
@@ -403,6 +431,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name28,
                 tribe = "드래드래족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString$rankString$rankString",
                 word = "「그게 너의 뜻이라면, 따르겠다.」",
@@ -417,6 +446,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name29,
                 tribe = "래비래비족",
+                tribeInfo = "test",
                 gender = maleString,
                 rank = "$rankString$rankString$rankString$rankString",
                 word = "「자신감이 없단 말이에요...」",
@@ -431,6 +461,7 @@ var listDataOne = listOf(
             InformationOne(
                 name = R.string.name30,
                 tribe = "네즈네즈족",
+                tribeInfo = "test",
                 gender = femaleString,
                 rank = "$rankString$rankString$rankString$rankString",
                 word = "「달이나 별은 거대한 마석이라고 해도 과언이 아닙니다.」",

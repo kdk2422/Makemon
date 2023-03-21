@@ -21,5 +21,7 @@
     <color name="status_bar_color">#EFF1F5</color>
 
     <color name="white_opacity_80">#CCFFFFFF</color>
+
+    <color name="tooltip_bg_color">#FFA514</color>
     <!-- -->
 </resources>

@@ -35,7 +35,6 @@ class TestFiveFragment : Fragment(), View.OnClickListener {
 
     override fun onResume() {
         super.onResume()
-
     }
 
     override fun onClick(v: View?) {

@@ -71,7 +71,7 @@ class SettingsActivity : BaseActivity<ActivitySettingsBinding>() {
 
     @Deprecated("Deprecated in Android SDK Version 33")
     override fun onBackPressed() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             Log.w(MainActivity.TAG, "ANDROID VERSION >= 33")
             this.onBackPressedDispatcher.addCallback(this, backPressedCallback)
         } else {
@@ -81,6 +81,12 @@ class SettingsActivity : BaseActivity<ActivitySettingsBinding>() {
                 else -> {
                     super.onBackPressed()
                 }
+            }
+        }*/
+        val navHostFragment = supportFragmentManager.primaryNavigationFragment
+        when (navHostFragment!!.childFragmentManager.fragments[0]) {
+            else -> {
+                super.onBackPressed()
             }
         }
     }

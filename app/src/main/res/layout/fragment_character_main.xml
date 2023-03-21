@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/parentView"
-    android:background="@color/view_bg_color">
+    android:background="@drawable/splash2">
 
     <TextView
         android:id="@+id/text"

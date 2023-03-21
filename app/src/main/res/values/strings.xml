@@ -12,7 +12,7 @@
     <string name="menu_five">list 5</string>
     <string name="menu_six">list 6</string>
 
-    <string name="viewpager_banner_text">%d / %d</string>
+    <string name="viewpager_banner_text">%d / %d (View All)</string>
 
     <string name="bottom_navigation_home_text">Home</string>
     <string name="bottom_navigation_list_text">illustrated list</string>
@@ -91,6 +91,37 @@
     <string name="name28"></string>
     <string name="name29"></string>
     <string name="name30"></string>
+
+    <string name="tribeInfo1"></string>
+    <string name="tribeInfo2"></string>
+    <string name="tribeInfo3"></string>
+    <string name="tribeInfo4"></string>
+    <string name="tribeInfo5"></string>
+    <string name="tribeInfo6"></string>
+    <string name="tribeInfo7"></string>
+    <string name="tribeInfo8"></string>
+    <string name="tribeInfo9"></string>
+    <string name="tribeInfo10"></string>
+    <string name="tribeInfo11"></string>
+    <string name="tribeInfo12"></string>
+    <string name="tribeInfo13"></string>
+    <string name="tribeInfo14"></string>
+    <string name="tribeInfo15"></string>
+    <string name="tribeInfo16"></string>
+    <string name="tribeInfo17"></string>
+    <string name="tribeInfo18"></string>
+    <string name="tribeInfo19"></string>
+    <string name="tribeInfo20"></string>
+    <string name="tribeInfo21"></string>
+    <string name="tribeInfo22"></string>
+    <string name="tribeInfo23"></string>
+    <string name="tribeInfo24"></string>
+    <string name="tribeInfo25"></string>
+    <string name="tribeInfo26"></string>
+    <string name="tribeInfo27"></string>
+    <string name="tribeInfo28"></string>
+    <string name="tribeInfo29"></string>
+    <string name="tribeInfo30"></string>
     <!--  -->
 
 
@@ -156,6 +187,37 @@
     <string name="name58"></string>
     <string name="name59"></string>
     <string name="name60"></string>
+
+    <string name="tribeInfo31"></string>
+    <string name="tribeInfo32"></string>
+    <string name="tribeInfo33"></string>
+    <string name="tribeInfo34"></string>
+    <string name="tribeInfo35"></string>
+    <string name="tribeInfo36"></string>
+    <string name="tribeInfo37"></string>
+    <string name="tribeInfo38"></string>
+    <string name="tribeInfo39"></string>
+    <string name="tribeInfo40"></string>
+    <string name="tribeInfo41"></string>
+    <string name="tribeInfo42"></string>
+    <string name="tribeInfo43"></string>
+    <string name="tribeInfo44"></string>
+    <string name="tribeInfo45"></string>
+    <string name="tribeInfo46"></string>
+    <string name="tribeInfo47"></string>
+    <string name="tribeInfo48"></string>
+    <string name="tribeInfo49"></string>
+    <string name="tribeInfo50"></string>
+    <string name="tribeInfo51"></string>
+    <string name="tribeInfo52"></string>
+    <string name="tribeInfo53"></string>
+    <string name="tribeInfo54"></string>
+    <string name="tribeInfo55"></string>
+    <string name="tribeInfo56"></string>
+    <string name="tribeInfo57"></string>
+    <string name="tribeInfo58"></string>
+    <string name="tribeInfo59"></string>
+    <string name="tribeInfo60"></string>
     <!--  -->
 
 
@@ -221,6 +283,37 @@
     <string name="name88"></string>
     <string name="name89"></string>
     <string name="name90"></string>
+
+    <string name="tribeInfo61"></string>
+    <string name="tribeInfo62"></string>
+    <string name="tribeInfo63"></string>
+    <string name="tribeInfo64"></string>
+    <string name="tribeInfo65"></string>
+    <string name="tribeInfo66"></string>
+    <string name="tribeInfo67"></string>
+    <string name="tribeInfo68"></string>
+    <string name="tribeInfo69"></string>
+    <string name="tribeInfo70"></string>
+    <string name="tribeInfo71"></string>
+    <string name="tribeInfo72"></string>
+    <string name="tribeInfo73"></string>
+    <string name="tribeInfo74"></string>
+    <string name="tribeInfo75"></string>
+    <string name="tribeInfo76"></string>
+    <string name="tribeInfo77"></string>
+    <string name="tribeInfo78"></string>
+    <string name="tribeInfo79"></string>
+    <string name="tribeInfo80"></string>
+    <string name="tribeInfo81"></string>
+    <string name="tribeInfo82"></string>
+    <string name="tribeInfo83"></string>
+    <string name="tribeInfo84"></string>
+    <string name="tribeInfo85"></string>
+    <string name="tribeInfo86"></string>
+    <string name="tribeInfo87"></string>
+    <string name="tribeInfo88"></string>
+    <string name="tribeInfo89"></string>
+    <string name="tribeInfo90"></string>
     <!--  -->
 
 
@@ -286,6 +379,37 @@
     <string name="name118"></string>
     <string name="name119"></string>
     <string name="name120"></string>
+
+    <string name="tribeInfo91"></string>
+    <string name="tribeInfo92"></string>
+    <string name="tribeInfo93"></string>
+    <string name="tribeInfo94"></string>
+    <string name="tribeInfo95"></string>
+    <string name="tribeInfo96"></string>
+    <string name="tribeInfo97"></string>
+    <string name="tribeInfo98"></string>
+    <string name="tribeInfo99"></string>
+    <string name="tribeInfo100"></string>
+    <string name="tribeInfo101"></string>
+    <string name="tribeInfo102"></string>
+    <string name="tribeInfo103"></string>
+    <string name="tribeInfo104"></string>
+    <string name="tribeInfo105"></string>
+    <string name="tribeInfo106"></string>
+    <string name="tribeInfo107"></string>
+    <string name="tribeInfo108"></string>
+    <string name="tribeInfo109"></string>
+    <string name="tribeInfo110"></string>
+    <string name="tribeInfo111"></string>
+    <string name="tribeInfo112"></string>
+    <string name="tribeInfo113"></string>
+    <string name="tribeInfo114"></string>
+    <string name="tribeInfo115"></string>
+    <string name="tribeInfo116"></string>
+    <string name="tribeInfo117"></string>
+    <string name="tribeInfo118"></string>
+    <string name="tribeInfo119"></string>
+    <string name="tribeInfo120"></string>
     <!--  -->
 
 
@@ -351,6 +475,37 @@
     <string name="name148"></string>
     <string name="name149"></string>
     <string name="name150"></string>
+
+    <string name="tribeInfo121"></string>
+    <string name="tribeInfo122"></string>
+    <string name="tribeInfo123"></string>
+    <string name="tribeInfo124"></string>
+    <string name="tribeInfo125"></string>
+    <string name="tribeInfo126"></string>
+    <string name="tribeInfo127"></string>
+    <string name="tribeInfo128"></string>
+    <string name="tribeInfo129"></string>
+    <string name="tribeInfo130"></string>
+    <string name="tribeInfo131"></string>
+    <string name="tribeInfo132"></string>
+    <string name="tribeInfo133"></string>
+    <string name="tribeInfo134"></string>
+    <string name="tribeInfo135"></string>
+    <string name="tribeInfo136"></string>
+    <string name="tribeInfo137"></string>
+    <string name="tribeInfo138"></string>
+    <string name="tribeInfo139"></string>
+    <string name="tribeInfo140"></string>
+    <string name="tribeInfo141"></string>
+    <string name="tribeInfo142"></string>
+    <string name="tribeInfo143"></string>
+    <string name="tribeInfo144"></string>
+    <string name="tribeInfo145"></string>
+    <string name="tribeInfo146"></string>
+    <string name="tribeInfo147"></string>
+    <string name="tribeInfo148"></string>
+    <string name="tribeInfo149"></string>
+    <string name="tribeInfo150"></string>
     <!--  -->
 
 
@@ -378,6 +533,18 @@
     <string name="name159"></string>
     <string name="name160"></string>
     <string name="name161"></string>
+
+    <string name="tribeInfo151"></string>
+    <string name="tribeInfo152"></string>
+    <string name="tribeInfo153"></string>
+    <string name="tribeInfo154"></string>
+    <string name="tribeInfo155"></string>
+    <string name="tribeInfo156"></string>
+    <string name="tribeInfo157"></string>
+    <string name="tribeInfo158"></string>
+    <string name="tribeInfo159"></string>
+    <string name="tribeInfo160"></string>
+    <string name="tribeInfo161"></string>
     <!--  -->
 
 </resources>

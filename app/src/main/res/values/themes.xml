@@ -37,6 +37,11 @@
         <item name="android:windowBackground">@color/white_opacity_80</item>
         <item name="android:statusBarColor">@color/status_bar_color</item>
     </style>
+
+    <style name="TribeDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
     
     <!--<style name="Scrollbar">
         <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>

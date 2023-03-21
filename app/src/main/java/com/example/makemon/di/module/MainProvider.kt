@@ -4,11 +4,11 @@ import com.example.makemon.ui.MainFragment
 import com.example.makemon.ui.character_list.CharacterListFiveFragment
 import com.example.makemon.ui.character_list.CharacterListFourFragment
 import com.example.makemon.ui.character_list.CharacterListMainFragment
+import com.example.makemon.ui.character_list.CharacterListDialog
 import com.example.makemon.ui.character_list.CharacterListOneFragment
 import com.example.makemon.ui.character_list.CharacterListSixFragment
 import com.example.makemon.ui.character_list.CharacterListThreeFragment
 import com.example.makemon.ui.character_list.CharacterListTwoFragment
-import com.example.makemon.ui.settings.SettingsFragment
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -38,4 +38,7 @@ abstract class MainProvider {
 
     @ContributesAndroidInjector(modules = [])
     abstract fun provideCharacterListSixFragment() : CharacterListSixFragment
+
+    @ContributesAndroidInjector(modules = [])
+    abstract fun provideCharacterListOneDialog() : CharacterListDialog
 }
