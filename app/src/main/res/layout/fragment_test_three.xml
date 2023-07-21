@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/view_bg_color"
+    android:animateLayoutChanges="true"
+    android:id="@+id/mainView">
+
+    <View
+        android:id="@+id/expandedView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/grey_one"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/expandTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="unexpanded"
+        android:textSize="20dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="@id/expandedView"
+        app:layout_constraintLeft_toLeftOf="@id/expandedView"
+        app:layout_constraintRight_toRightOf="@id/expandedView"
+        app:layout_constraintBottom_toBottomOf="@id/expandedView"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.05"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

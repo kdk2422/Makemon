@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/view_bg_color"
+    android:id="@+id/mainView">
+
+    <TextView
+        android:id="@+id/clickText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="화면을 누르세요!"
+        android:textColor="@color/grey_one"
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btDeleteView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:text="렉이 걸리면 누르세요!"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

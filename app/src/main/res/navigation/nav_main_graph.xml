@@ -28,13 +28,19 @@
         <action
             android:id="@+id/action_characterListMainFragment_to_characterListFourFragment"
             app:destination="@id/characterListFourFragment" />
+        <action
+            android:id="@+id/action_characterListMainFragment_to_characterListFiveFragment"
+            app:destination="@id/characterListFiveFragment" />
+        <action
+            android:id="@+id/action_characterListMainFragment_to_characterListSixFragment"
+            app:destination="@id/characterListSixFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/characterListOneFragment"
         android:name="com.example.makemon.ui.character_list.CharacterListOneFragment"
         android:label="CharacterListOneFragment"
-        tools:layout="@layout/fragment_character_one">
+        tools:layout="@layout/fragment_character">
         <action
             android:id="@+id/action_characterListOneFragment_to_characterListMainFragment"
             app:destination="@id/characterListMainFragment" />
@@ -44,7 +50,7 @@
         android:id="@+id/characterListTwoFragment"
         android:name="com.example.makemon.ui.character_list.CharacterListTwoFragment"
         android:label="CharacterListTwoFragment"
-        tools:layout="@layout/fragment_character_two">
+        tools:layout="@layout/fragment_character">
         <action
             android:id="@+id/action_characterListTwoFragment_to_characterListMainFragment"
             app:destination="@id/characterListMainFragment" />
@@ -54,7 +60,7 @@
         android:id="@+id/characterListThreeFragment"
         android:name="com.example.makemon.ui.character_list.CharacterListThreeFragment"
         android:label="CharacterListThreeFragment"
-        tools:layout="@layout/fragment_character_three">
+        tools:layout="@layout/fragment_character">
         <action
             android:id="@+id/action_characterListThreeFragment_to_characterListMainFragment"
             app:destination="@id/characterListMainFragment" />
@@ -68,9 +74,28 @@
     <fragment
         android:id="@+id/characterListFourFragment"
         android:name="com.example.makemon.ui.character_list.CharacterListFourFragment"
-        android:label="CharacterListFourFragment" >
+        android:label="CharacterListFourFragment"
+        tools:layout="@layout/fragment_character">
         <action
             android:id="@+id/action_characterListFourFragment_to_characterListMainFragment"
+            app:destination="@id/characterListMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterListFiveFragment"
+        android:name="com.example.makemon.ui.character_list.CharacterListFiveFragment"
+        android:label="CharacterListFiveFragment"
+        tools:layout="@layout/fragment_character">
+        <action
+            android:id="@+id/action_characterListFiveFragment_to_characterListMainFragment"
+            app:destination="@id/characterListMainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characterListSixFragment"
+        android:name="com.example.makemon.ui.character_list.CharacterListSixFragment"
+        android:label="CharacterListSixFragment"
+        tools:layout="@layout/fragment_character">
+        <action
+            android:id="@+id/action_characterListSixFragment_to_characterListMainFragment"
             app:destination="@id/characterListMainFragment" />
     </fragment>
 

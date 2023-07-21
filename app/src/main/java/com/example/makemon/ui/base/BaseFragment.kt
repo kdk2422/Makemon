@@ -28,8 +28,8 @@ abstract class BaseFragment<B : ViewBinding, V : BaseViewModel?> : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        observe()
         init()
+        observe()
         viewModel!!.init()
     }
 

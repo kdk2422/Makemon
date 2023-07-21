@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "408207380376",
+    "project_id": "makemon-6135c",
+    "storage_bucket": "makemon-6135c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:408207380376:android:69263564760157c9b1e5ed",
+        "android_client_info": {
+          "package_name": "com.example.makemon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "408207380376-foipggdknojmgvd3pdjv4i7fjf4j8jbv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.makemon",
+            "certificate_hash": "b2fab1f554c5e0b8c9fecbc1bd93010eecdeddc2"
+          }
+        },
+        {
+          "client_id": "408207380376-eln7bqjpr015kq9k3kprbd8a09l7nirk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMn0x54lhi0uSWqfhDF19C1Rnin9Rlfy4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "408207380376-eln7bqjpr015kq9k3kprbd8a09l7nirk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

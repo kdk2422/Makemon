@@ -3,26 +3,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/parentView">
+    android:id="@+id/parentView"
+    android:background="@drawable/splash2">
 
     <TextView
-        android:id="@+id/centerView"
-        android:layout_width="wrap_content"
+        android:id="@+id/text"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="test"
-        android:textSize="30dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:text="@string/list_announcement"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/menuOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/menu_one"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="@id/centerView"
         app:layout_constraintBottom_toBottomOf="@id/centerView"
@@ -34,8 +36,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/menu_two"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="@id/centerView"
         app:layout_constraintBottom_toBottomOf="@id/centerView"
@@ -47,8 +50,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/menu_three"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="@id/centerView"
         app:layout_constraintBottom_toBottomOf="@id/centerView"
@@ -60,12 +64,125 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/menu_four"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="@id/centerView"
         app:layout_constraintBottom_toBottomOf="@id/centerView"
         app:layout_constraintLeft_toLeftOf="@id/centerView"
         app:layout_constraintRight_toRightOf="@id/centerView"/>
+
+    <TextView
+        android:id="@+id/menuFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_five"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/centerView"
+        app:layout_constraintBottom_toBottomOf="@id/centerView"
+        app:layout_constraintLeft_toLeftOf="@id/centerView"
+        app:layout_constraintRight_toRightOf="@id/centerView"/>
+
+    <TextView
+        android:id="@+id/menuSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_six"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/centerView"
+        app:layout_constraintBottom_toBottomOf="@id/centerView"
+        app:layout_constraintLeft_toLeftOf="@id/centerView"
+        app:layout_constraintRight_toRightOf="@id/centerView"/>
+
+    <!--<TextView
+        android:id="@+id/testOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_four"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="0"/>
+
+    <TextView
+        android:id="@+id/testTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_four"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="60"/>
+
+    <TextView
+        android:id="@+id/testThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_four"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="120"/>
+
+    <TextView
+        android:id="@+id/testFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_four"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="180"/>
+
+    <TextView
+        android:id="@+id/testFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_four"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="240"/>
+
+    <TextView
+        android:id="@+id/testSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/menu_four"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        app:layout_constraintCircle="@id/centerView"
+        app:layout_constraintCircleRadius="100dp"
+        app:layout_constraintCircleAngle="300"/>-->
+
+    <TextView
+        android:id="@+id/centerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TAP"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:padding="25dp"
+        android:background="@drawable/tab_button_background"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

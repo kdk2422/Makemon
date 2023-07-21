@@ -9,5 +9,110 @@
         android:id="@+id/settingsFragment"
         android:name="com.example.makemon.ui.settings.SettingsFragment"
         android:label="SettingsFragment"
-        tools:layout="@layout/fragment_settings"/>
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_testFragment"
+            app:destination="@id/testFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testTwoFragment"
+            app:destination="@id/testTwoFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testThreeFragment"
+            app:destination="@id/testThreeFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testFourFragment"
+            app:destination="@id/testFourFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testFiveFragment"
+            app:destination="@id/testFiveFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testSixFragment"
+            app:destination="@id/testSixFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testSevenFragment"
+            app:destination="@id/testSevenFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testEightFragment"
+            app:destination="@id/testEightFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testNineFragment"
+            app:destination="@id/testNineFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testTenFragment"
+            app:destination="@id/testTenFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testElevenFragment"
+            app:destination="@id/testElevenFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testTwelveFragment"
+            app:destination="@id/testTwelveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.example.makemon.ui.settings.test.TestFragment"
+        android:label="TestFragment"
+        tools:layout="@layout/fragment_test"/>
+    <fragment
+        android:id="@+id/testTwoFragment"
+        android:name="com.example.makemon.ui.settings.test.TestTwoFragment"
+        android:label="TestTwoFragment"
+        tools:layout="@layout/fragment_test_two"/>
+    <fragment
+        android:id="@+id/testThreeFragment"
+        android:name="com.example.makemon.ui.settings.test.TestThreeFragment"
+        android:label="TestThreeFragment"
+        tools:layout="@layout/fragment_test_three"/>
+    <fragment
+        android:id="@+id/testFourFragment"
+        android:name="com.example.makemon.ui.settings.test.TestFourFragment"
+        android:label="TestFourFragment"
+        tools:layout="@layout/fragment_test_four"/>
+    <fragment
+        android:id="@+id/testFiveFragment"
+        android:name="com.example.makemon.ui.settings.test.TestFiveFragment"
+        android:label="TestFiveFragment"
+        tools:layout="@layout/fragment_test_five"/>
+    <fragment
+        android:id="@+id/testSixFragment"
+        android:name="com.example.makemon.ui.settings.test.TestSixFragment"
+        android:label="TestSixFragment"
+        tools:layout="@layout/fragment_test_six"/>
+    <fragment
+        android:id="@+id/testSevenFragment"
+        android:name="com.example.makemon.ui.settings.test.TestSevenFragment"
+        android:label="TestSevenFragment"
+        tools:layout="@layout/fragment_test_seven"/>
+    <fragment
+        android:id="@+id/testEightFragment"
+        android:name="com.example.makemon.ui.settings.test.TestEightFragment"
+        android:label="TestEightFragment"
+        tools:layout="@layout/fragment_test_eight"/>
+    <fragment
+        android:id="@+id/testNineFragment"
+        android:name="com.example.makemon.ui.settings.test.TestNineFragment"
+        android:label="TestNineFragment"
+        tools:layout="@layout/fragment_test_nine"/>
+    <fragment
+        android:id="@+id/gamesFragment"
+        android:name="com.example.makemon.ui.settings.contents.GamesFragment"
+        android:label="GamesFragment"
+        tools:layout="@layout/fragment_games"/>
+    <fragment
+        android:id="@+id/testTenFragment"
+        android:name="com.example.makemon.ui.settings.test.TestTenFragment"
+        android:label="TestTenFragment"
+        tools:layout="@layout/fragment_test_ten"/>
+    <fragment
+        android:id="@+id/testElevenFragment"
+        android:name="com.example.makemon.ui.settings.test.TestElevenFragment"
+        android:label="TestElevenFragment"
+        tools:layout="@layout/fragment_test_eleven"/>
+    <fragment
+        android:id="@+id/testTwelveFragment"
+        android:name="com.example.makemon.ui.settings.test.TestTwelveFragment"
+        android:label="TestTwelveFragment"
+        tools:layout="@layout/fragment_test_twelve"/>
 </navigation>
