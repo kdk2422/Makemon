@@ -58,6 +58,12 @@ class TestSevenFragment : Fragment(), View.OnClickListener {
         lm = requireContext().applicationContext.getSystemService(AppCompatActivity.LOCATION_SERVICE) as LocationManager
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+
+        lm.removeUpdates(gpsLocationListener)
+    }
+
     override fun onClick(v: View?) {
         if (v != null) {
             when (v.id) {
@@ -66,12 +72,6 @@ class TestSevenFragment : Fragment(), View.OnClickListener {
                 }
             }
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-
-        lm.removeUpdates(gpsLocationListener)
     }
 
     private fun getGPSProvider() {

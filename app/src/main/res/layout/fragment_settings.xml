@@ -139,14 +139,14 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text=" Youtube"
+                    android:text=" Youtube Shortcut"
                     android:textSize="25dp" />
 
             </LinearLayout>
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="0.5dp"
                 android:background="@color/black" />
 
             <LinearLayout
@@ -167,7 +167,7 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text=" Pixiv"
+                    android:text=" Pixiv Shortcut"
                     android:textSize="25dp" />
 
             </LinearLayout>
@@ -195,7 +195,7 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text=" Fanbox"
+                    android:text=" Fanbox Shortcut"
                     android:textSize="25dp" />
 
             </LinearLayout>
@@ -223,7 +223,7 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text=" Booth"
+                    android:text=" Booth Shortcut"
                     android:textSize="25dp" />
 
             </LinearLayout>
@@ -251,7 +251,7 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text=" Skep"
+                    android:text=" Skep Shortcut"
                     android:textSize="25dp" />
 
             </LinearLayout>
@@ -278,7 +278,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=" Alice Books"
+                    android:text=" Alice Books Shortcut"
                     android:textSize="25dp" />
 
             </LinearLayout>
@@ -306,7 +306,35 @@
                     android:layout_weight="0.5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text=" Character Make"
+                    android:text=" Character Make Shortcut"
+                    android:textSize="25dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/layerGames"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_launcher_background"/>
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=" Game list"
                     android:textSize="25dp" />
 
             </LinearLayout>
@@ -645,6 +673,90 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text=" Test Gravity"
+                    android:textSize="25dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/testTen"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_launcher_background"/>
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=" Test Zoom in"
+                    android:textSize="25dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/testEleven"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_launcher_background"/>
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=" Test Encode Decode"
+                    android:textSize="25dp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/testTwelve"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_launcher_background"/>
+
+                <TextView
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text=" Test "
                     android:textSize="25dp" />
 
             </LinearLayout>

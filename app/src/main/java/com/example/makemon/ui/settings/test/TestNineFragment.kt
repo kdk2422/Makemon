@@ -35,7 +35,7 @@ import java.util.Map.entry
 import kotlin.random.Random
 
 
-class TestNineFragment : Fragment(), SensorEventListener {
+class TestNineFragment : Fragment(), SensorEventListener, View.OnClickListener {
 
     companion object {
         private const val VIEW_SIZE = 100
@@ -70,8 +70,32 @@ class TestNineFragment : Fragment(), SensorEventListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.btDeleteView.setOnClickListener(this)
+
         initSensorManager()
         initTouchListener()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // 리스너 등록
+        sensorManager.registerListener(this, accelerometerSensor, SensorManager.SENSOR_DELAY_UI)
+    }
+
+    override fun onPause() {
+        // 리스너 해제
+        sensorManager.unregisterListener(this)
+        super.onPause()
+    }
+
+    override fun onClick(v: View?) {
+        if (v != null) {
+            when(v.id) {
+                R.id.btDeleteView -> {
+                    binding.root.removeAllViewsInLayout()
+                }
+            }
+        }
     }
 
     private fun initSensorManager() {
@@ -102,9 +126,6 @@ class TestNineFragment : Fragment(), SensorEventListener {
                 }
                 else -> true
             }
-        }
-        binding.btDeleteView.setOnClickListener {
-            binding.root.removeAllViewsInLayout()
         }
     }
 
@@ -181,7 +202,6 @@ class TestNineFragment : Fragment(), SensorEventListener {
     }
 
     private fun vibrator() {
-
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             val vibratorManager = requireContext().applicationContext.getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
             val vibrator = vibratorManager.defaultVibrator
@@ -204,19 +224,5 @@ class TestNineFragment : Fragment(), SensorEventListener {
             }
 
         }
-    }
-
-    override fun onResume() {
-        super.onResume()
-
-        // 리스너 등록
-        sensorManager.registerListener(this, accelerometerSensor, SensorManager.SENSOR_DELAY_UI)
-    }
-
-    override fun onPause() {
-
-        // 리스너 해제
-        sensorManager.unregisterListener(this)
-        super.onPause()
     }
 }

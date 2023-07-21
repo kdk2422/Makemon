@@ -1,22 +1,22 @@
-package com.example.makemon.ui.settings.test
+package com.example.makemon.ui.settings.contents
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.makemon.databinding.FragmentTestEightBinding
+import com.example.makemon.databinding.FragmentGamesBinding
 
-class TestEightFragment : Fragment() {
+class GamesFragment : Fragment(), View.OnClickListener {
 
-    lateinit var binding: FragmentTestEightBinding
+    lateinit var binding: FragmentGamesBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentTestEightBinding.inflate(inflater, container, false)
+        binding = FragmentGamesBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -28,5 +28,5 @@ class TestEightFragment : Fragment() {
         super.onResume()
     }
 
-
+    override fun onClick(v: View?) {}
 }

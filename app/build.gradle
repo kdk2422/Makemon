@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.makemon"
-        minSdk 24
+        minSdk 26
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -21,6 +21,10 @@ android {
     }
 
     buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -31,9 +35,21 @@ android {
         }
     }
 
+    dependencies {
+        modules {
+            module("org.jetbrains.kotlin:kotlin-stdlib-jdk7") {
+                replacedBy("org.jetbrains.kotlin:kotlin-stdlib", "kotlin-stdlib-jdk7 is now part of kotlin-stdlib")
+            }
+            module("org.jetbrains.kotlin:kotlin-stdlib-jdk8") {
+                replacedBy("org.jetbrains.kotlin:kotlin-stdlib", "kotlin-stdlib-jdk8 is now part of kotlin-stdlib")
+            }
+        }
+    }
+
     buildFeatures {
         dataBinding = true
         viewBinding = true
+        compose = true
     }
 
     compileOptions {
@@ -42,7 +58,11 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = "1.8"
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = '1.3.2'
     }
 }
 
@@ -62,7 +82,7 @@ dependencies {
     implementation 'com.tbuonomo:dotsindicator:4.3'
     // tooltip
     implementation "com.github.skydoves:balloon:1.5.2"
-    implementation "com.github.skydoves:balloon:1.5.3-SNAPSHOT"
+//    implementation "com.github.skydoves:balloon:1.5.3-SNAPSHOT"
 
     // noinspection GradleCompatible
     implementation 'com.android.support:support-compat:25.0.0'
@@ -122,6 +142,30 @@ dependencies {
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.13.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+
+    // DataStore
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation("androidx.datastore:datastore-preferences-core:1.0.0")
+
+    // Compose
+    implementation platform("androidx.compose:compose-bom:2023.01.00")
+    androidTestImplementation platform("androidx.compose:compose-bom:2023.01.00")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.material:material")
+    implementation("androidx.compose.foundation:foundation")
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    debugImplementation("androidx.compose.ui:ui-tooling")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
+    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    implementation("androidx.compose.material:material-icons-core")
+    implementation("androidx.compose.material:material-icons-extended")
+    implementation("androidx.compose.material3:material3-window-size-class")
+    implementation("androidx.activity:activity-compose:1.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
+    implementation("androidx.compose.runtime:runtime-livedata")
+    implementation("androidx.compose.runtime:runtime-rxjava2")
+
 
     /*
     Copyright 2019 skydoves (Jaewoong Eum)

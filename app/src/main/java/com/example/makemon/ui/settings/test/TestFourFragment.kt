@@ -12,7 +12,7 @@ import com.example.makemon.databinding.FragmentTestFourBinding
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class TestFourFragment : Fragment(), View.OnClickListener {
+class TestFourFragment : Fragment() {
 
     lateinit var binding: FragmentTestFourBinding
 
@@ -41,14 +41,6 @@ class TestFourFragment : Fragment(), View.OnClickListener {
         lifecycleScope.launch {
             delay(1000)
             binding.scrollTextTwo.startScroll()
-        }
-    }
-
-    override fun onClick(v: View?) {
-        if (v != null) {
-            when(v.id) {
-
-            }
         }
     }
 }

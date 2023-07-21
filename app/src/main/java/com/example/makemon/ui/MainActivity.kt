@@ -29,6 +29,7 @@ import com.google.firebase.messaging.FirebaseMessaging
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
+import io.reactivex.Single
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -68,26 +69,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), Injectable, HasSupport
 
     override fun onResume() {
         super.onResume()
-
-//        permission()
-
-//        val audioManager: AudioManager = this.getSystemService(Context.AUDIO_SERVICE) as AudioManager
-//        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, ((audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC) * 0.5).toInt()), AudioManager.FLAG_PLAY_SOUND)
     }
-
-    /*override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        when(keyCode) {
-            KeyEvent.KEYCODE_VOLUME_UP -> {
-                Log.w("test", "test")
-                return true
-            }
-            KeyEvent.KEYCODE_VOLUME_DOWN -> {
-                Log.w("test", "test")
-                return true
-            }
-        }
-        return false
-    }*/
 
     private fun setNav() {
         navHostFragment =
@@ -286,37 +268,4 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), Injectable, HasSupport
     }
 
     override fun supportFragmentInjector(): AndroidInjector<Fragment> = dispatchingAndroidInjector
-
-    /*private fun permission() {
-        //Note: 다중 퍼미션 권한 체크 로직
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            requestPermission.launch(
-                arrayOf(
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                    Manifest.permission.READ_EXTERNAL_STORAGE,
-                    Manifest.permission.READ_MEDIA_IMAGES,
-                    Manifest.permission.POST_NOTIFICATIONS,
-                    Manifest.permission.ACCESS_FINE_LOCATION,
-                    Manifest.permission.ACCESS_COARSE_LOCATION
-                )
-            )
-        } else {
-            requestPermission.launch(
-                arrayOf(
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                    Manifest.permission.READ_EXTERNAL_STORAGE,
-                    Manifest.permission.ACCESS_FINE_LOCATION,
-                    Manifest.permission.ACCESS_COARSE_LOCATION
-                )
-            )
-        }
-    }*/
-
-    /*private val requestPermission = registerForActivityResult(
-        ActivityResultContracts.RequestMultiplePermissions()
-    ) {
-        for (entry in it.entries) {
-            Log.w("MainFragment", "onActivityResult:: ${entry.key} = ${entry.value}")
-        }
-    }*/
 }

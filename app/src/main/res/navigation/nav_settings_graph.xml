@@ -37,6 +37,18 @@
         <action
             android:id="@+id/action_settingsFragment_to_testNineFragment"
             app:destination="@id/testNineFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_gamesFragment"
+            app:destination="@id/gamesFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testTenFragment"
+            app:destination="@id/testTenFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testElevenFragment"
+            app:destination="@id/testElevenFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_testTwelveFragment"
+            app:destination="@id/testTwelveFragment" />
     </fragment>
     <fragment
         android:id="@+id/testFragment"
@@ -83,4 +95,24 @@
         android:name="com.example.makemon.ui.settings.test.TestNineFragment"
         android:label="TestNineFragment"
         tools:layout="@layout/fragment_test_nine"/>
+    <fragment
+        android:id="@+id/gamesFragment"
+        android:name="com.example.makemon.ui.settings.contents.GamesFragment"
+        android:label="GamesFragment"
+        tools:layout="@layout/fragment_games"/>
+    <fragment
+        android:id="@+id/testTenFragment"
+        android:name="com.example.makemon.ui.settings.test.TestTenFragment"
+        android:label="TestTenFragment"
+        tools:layout="@layout/fragment_test_ten"/>
+    <fragment
+        android:id="@+id/testElevenFragment"
+        android:name="com.example.makemon.ui.settings.test.TestElevenFragment"
+        android:label="TestElevenFragment"
+        tools:layout="@layout/fragment_test_eleven"/>
+    <fragment
+        android:id="@+id/testTwelveFragment"
+        android:name="com.example.makemon.ui.settings.test.TestTwelveFragment"
+        android:label="TestTwelveFragment"
+        tools:layout="@layout/fragment_test_twelve"/>
 </navigation>
